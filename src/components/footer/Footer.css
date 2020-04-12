@@ -1,0 +1,9 @@
+footer {
+    background-image: url("footer_background.jpg");
+    background-color: brown;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 50vh;
+    width: 100%;
+}

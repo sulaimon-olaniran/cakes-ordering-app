@@ -1,0 +1,49 @@
+.about-section {
+    background-image: url("home_background.jpg");
+    background-color: bisque;
+    min-height: 90vh;
+    width: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.cakes-section {
+    background-image: url("cakes_background.jpg");
+    background-image: pink;
+    min-height: 60vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cupcakes-section {
+    background-image: url("cupcakes_background.jpg");
+    background-image: pink;
+    min-height: 60vh;
+    width: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+@media(min-width : 968px){
+
+    .about-section{
+        background-image: url("home_backgroundTwo.jpg");
+        background-position: center;
+        width: 70%;
+    }
+    .cakes-section {
+        width: 70%;
+    }
+    .cupcakes-section{
+        background-image: url("cupcakes_backgroundTwo.jpg");
+        background-position: center;
+        width: 70%;
+    }
+}
