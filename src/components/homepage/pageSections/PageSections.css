@@ -6,6 +6,8 @@
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    justify-content: center;
     
 }
 
@@ -29,7 +31,17 @@
     background-size: cover;
 }
 
-
+@media(min-width : 700px) and (orientation: landscape) {
+    .about-section{
+        background-image: url("home_backgroundTwo.jpg");
+        background-position: center;
+    }
+    .cupcakes-section {
+        background-image: url("cupcakes_backgroundTwo.jpg");
+        background-position: bottom; 
+    }
+}
+        
 
 @media(min-width : 968px){
 

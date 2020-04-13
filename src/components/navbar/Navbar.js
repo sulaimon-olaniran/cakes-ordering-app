@@ -1,6 +1,7 @@
 import React from 'react'
 import BurgerButton from './burgerNav/BurgerButton'
 import './Navbar.css'
+import { NavLink } from 'react-router-dom'
 
 
 
@@ -12,9 +13,18 @@ const Navbar = () => {
             </div>
             <div className="links-container">
                 <ul>
-                    <li>Products</li>
-                    <li>Order</li>
-                    <li>About</li>
+                    <NavLink to='/products'>
+                        <li>Products</li>
+                    </NavLink>
+
+                    <NavLink to='/order'>
+                        <li>Order</li>
+                    </NavLink>
+
+                    <NavLink to='/about'>
+                        <li>About</li>
+                    </NavLink>
+
                 </ul>
             </div>
 

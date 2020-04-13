@@ -29,6 +29,18 @@ nav {
     width: 8vh;
 }
 
+@media(min-width : 700px) and (orientation: landscape) {
+    .burger-container  img{
+        height: 10vh;
+        width: 10vh;
+    }
+
+    .burger-container{
+        margin-right: 20px;
+    }
+
+}
+
 @media(min-width : 968px){
   .burger-container{
       display: none;
