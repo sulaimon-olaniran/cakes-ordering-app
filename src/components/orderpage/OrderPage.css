@@ -1,0 +1,171 @@
+.form-container {
+    min-height: 90vh;
+    background-color: coral;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-field {
+    width: 90%;
+    min-height: 80vh;
+    background-color: darkgray;
+}
+.cake-field{
+    min-height: 70vh;
+    width: 100%;
+    background-color: rgb(231, 225, 225);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.cake-field-title{
+    width: 80%;
+    height: 10vh;
+    background-color: rgb(236, 118, 97);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    
+}
+
+.cake-selection {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 25px ;
+}
+
+label{
+    color: rgb(83, 81, 81);
+    font-size: 1.2rem;
+}
+
+span {
+    height: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+h3 {
+   font-size: 1.5rem;
+   color: rgb(221, 207, 207);
+}
+[type="text"] {
+    display: block;
+    border: none;
+    background: none;
+    border-bottom: 2px solid salmon;
+    width: 150px;
+    font-size: 1rem;
+    color: slategray;
+}
+.span-div{
+    width: 100%;
+}
+
+.other-label{
+    
+}
+
+[type="text"]:focus{
+    outline: none;
+}
+.invisible {
+    display: none;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+/* the circles*/
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #666;
+}
+
+
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+}
+ /* the circled dots */
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #F87DA9;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+span [type="text"] {
+    display: none;
+}
+
+span [type="radio"]:checked ~ [type="text"] {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
