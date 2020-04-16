@@ -10,12 +10,30 @@
 .form-field {
     width: 90%;
     min-height: 80vh;
-    background-color: darkgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+   
 }
+.page-header {
+    width: 90%;
+    height: 10vh;
+    background-image: linear-gradient(#ff9d2f, #ff6126);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border-radius: 25px;
+}
+h2 {
+    color: rgb(76, 95, 116);
+}
+
 .cake-field{
     min-height: 70vh;
     width: 100%;
     background-color: rgb(231, 225, 225);
+    border-radius: 35px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -33,7 +51,7 @@
 }
 
 .cake-selection {
-    height: 50vh;
+    min-height: 50vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -47,7 +65,7 @@ label{
 }
 
 span {
-    height: 5vh;
+    min-height: 5vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -56,6 +74,7 @@ h3 {
    font-size: 1.5rem;
    color: rgb(221, 207, 207);
 }
+
 [type="text"] {
     display: block;
     border: none;
@@ -69,16 +88,46 @@ h3 {
     width: 100%;
 }
 
-.other-label{
-    
+.full-name {
+    width: 80%;
+    text-transform: capitalize;
+}
+.full-name:focus{
+    outline: none;
+   
 }
 
-[type="text"]:focus{
+.text-area {
+    width: 80%;
+    height: 10vh;
+    font-size: 1.2rem;
+    padding: 5px;
+    color: rgb(95, 93, 93);
+    background-color: transparent;
+    border:none;
+    border: 2px salmon solid;
+}
+.text-area:focus {
     outline: none;
 }
-.invisible {
-    display: none;
-    
+
+.select-box {
+    width: 80%;
+    height: 5vh;
+    border: 2px salmon solid;
+    background-color: transparent;
+    font-size: 1rem;
+    color: rgb(95, 93, 93);
+}
+
+.select-box:focus{
+    outline: none;
+}
+option{
+    font-size: 0.8rem;
+}
+.select-box:focus + option {
+    width: 80%;
 }
 
 
