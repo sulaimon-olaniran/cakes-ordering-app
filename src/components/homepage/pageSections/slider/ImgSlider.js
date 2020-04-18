@@ -23,7 +23,7 @@ function ImgSlider({cakeImage}){
                     <div key={index} className="img-slider"
                      style={{transform : `translateX(${x}%)`}}
                     >
-                        <EachSlide text={image} cakeImage ={cakeImage} />
+                        <EachSlide text={image} cakeImage ={cakeImage}  />
                     </div>
                 )
             })

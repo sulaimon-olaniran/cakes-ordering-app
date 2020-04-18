@@ -1,9 +1,10 @@
 import React from 'react'
+import CakesPage from './cakespage/CakesPage'
 
 
 const CupCakes = () => {
      return (
-        <h1>Cup-Cakes Section</h1>
+        <CakesPage />
      )
 }
 
