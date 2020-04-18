@@ -38,10 +38,21 @@ h2 {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    margin-bottom: 20px;
 }
+ .address-field {
+    min-height: 80vh;
+    width: 100%;
+    background-color: rgb(231, 225, 225);
+    border-radius: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+
 .cake-field-title{
     width: 80%;
-    height: 10vh;
+    height: 8vh;
     background-color: rgb(236, 118, 97);
     display: flex;
     justify-content: center;
@@ -59,8 +70,19 @@ h2 {
     padding-left: 25px ;
 }
 
+.delivery-selection{
+    min-height: 50vh;
+    width: 100%;
+    padding-left: 30px;
+}
+
+.delivery-rad {
+    margin-top: 10px;
+    width: 100%;
+}
+
 label{
-    color: rgb(83, 81, 81);
+    color: rgb(10, 7, 7);
     font-size: 1.2rem;
 }
 
@@ -84,6 +106,11 @@ h3 {
     font-size: 1rem;
     color: slategray;
 }
+
+[type="text"]:focus{
+    outline: none;
+}
+
 .span-div{
     width: 100%;
 }
@@ -129,9 +156,49 @@ option{
 .select-box:focus + option {
     width: 80%;
 }
+.date-input{
+    width: 80%;
+    background-color: transparent;
+    border: 2px solid salmon;
+    height: 5vh;
+    color: rgb(95, 93, 93);
+    font-size: 1.2rem;
+    text-align: center;
+}
 
+.other-info {
+    min-height: 85vh;
+}
+.other-field {
+    min-height: 105vh;
+}
 
+.pick-title {
+    margin: 20px 0px 20px 0px ;
+}
 
+.button-div{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0px;
+}
+
+.button-div button {
+    width: 200px;
+    height: 8vh;
+    background: transparent;
+    border: none;
+    border: 2px solid rgb(92, 91, 91);
+    border-radius: 20px;
+    color: rgb(236, 225, 225);
+    font-size: 1.3rem;
+}
+.button-div button:hover{
+    background-color: rgb(26, 25, 25);
+}
 
 
 
@@ -194,17 +261,46 @@ span [type="text"] {
 span [type="radio"]:checked ~ [type="text"] {
     display: block;
 }
+.delivery-rad [type="radio"]:checked ~ .address {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
 
 
+.pickup-rad [type="radio"]:checked ~ .pick-address {
+    margin-top: 30px;
+    width: 80%;
+    height: 35vh;
+    border: 2px solid salmon;
+    padding: 3px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+    border-radius: 25px;
+}
+.pick-address h3, h4 {
+    color: rgb(110, 110, 110);
+}
+.pick-address p{
+  font-size: 0.9rem;
+  color: rgb(110, 110, 110);
+}
 
+.address [type="text"] {
+    display: block;
+}
 
+.pick-address{
+    display: none;
+}
 
-
-
-
-
-
-
+.address {
+    display: none;
+}
 
 
 [type="radio"]:not(:checked) + label:after {
@@ -217,4 +313,15 @@ span [type="radio"]:checked ~ [type="text"] {
     opacity: 1;
     -webkit-transform: scale(1);
     transform: scale(1);
+}
+
+[type="tel"] {
+    background: transparent;
+    border: none;
+    width: 150px;
+    border-bottom: 2px solid salmon;
+}
+
+[type="tel"]:focus{
+    outline: none;
 }

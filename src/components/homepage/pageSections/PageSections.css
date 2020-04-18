@@ -10,52 +10,52 @@
     justify-content: center;
     
 }
+p{
+    color: rgb(215, 230, 245);
+}
 
 .cakes-section {
-    background-image: url("cakes_background.jpg");
-    background-image: pink;
-    min-height: 60vh;
+    min-height: 90vh;
     width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #ab8060;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px 0;
+}
+.cakes-section button, .cupcakes-section button{
+    height: 8vh;
+    width: 20vh ;
+    background-color: rgb(94, 92, 92);
+    color: rgb(238, 236, 236);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 25px;
+}
+a {
+    text-decoration: none;
 }
 
 .cupcakes-section {
-    background-image: url("cupcakes_background.jpg");
-    background-image: pink;
-    min-height: 60vh;
+    min-height: 90vh;
     width: 100%;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #d2a494;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 5px;
 }
 
 @media(min-width : 700px) and (orientation: landscape) {
-    .about-section{
-        background-image: url("home_backgroundTwo.jpg");
-        background-position: center;
-    }
-    .cupcakes-section {
-        background-image: url("cupcakes_backgroundTwo.jpg");
-        background-position: bottom; 
-    }
+    
 }
         
 
 @media(min-width : 968px){
 
-    .about-section{
-        background-image: url("home_backgroundTwo.jpg");
-        background-position: center;
-        width: 70%;
-    }
-    .cakes-section {
-        width: 70%;
-    }
-    .cupcakes-section{
-        background-image: url("cupcakes_backgroundTwo.jpg");
-        background-position: center;
-        width: 70%;
-    }
 }

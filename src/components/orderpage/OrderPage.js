@@ -8,6 +8,7 @@ import CakeShapes from './cakeforms/CakeShapes'
 import CakeFlavours from './cakeforms/CakeFlavours'
 import CakeIcing from './cakeforms/CakeIcing'
 import OtherCakeInfo from './OtherCakeInfo'
+import DeliveryType from './cakeforms/DeliveryType'
 
 const OrderPage = ({ values }) => {
 
@@ -26,9 +27,10 @@ const OrderPage = ({ values }) => {
                 <CakeFlavours />
                 <CakeIcing />
                 <OtherCakeInfo />
+                <DeliveryType />
 
-                <div>
-                 <button>Submit</button>
+                <div className="button-div">
+                  <button type="submit">Place Order</button>
                 </div>
             </Form>
 
@@ -46,11 +48,28 @@ const FormikOrderPage = withFormik({
             otherCake: "",
             cakeFill: "",
             otherFill: "",
-            cakeShape : "",
-            otherShape : "",
-            cakeFlavor : "",
-            otherFlavor : "",
-            celebrantSex : "choose sex"
+            cakeShape: "",
+            otherShape: "",
+            cakeFlavor: "",
+            otherFlavor: "",
+            cakeIcing: "",
+            otherIcing: "",
+            fullName: "",
+            celebrantSex: "",
+            ocassion: "",
+            celebrantAge: "",
+            cakeColor: "",
+            specialRequest: "",
+            cakeMessage: "",
+            cakeSize: "",
+            eventDate: "",
+            deliveryType: "",
+            city: "",
+            state: "",
+            postalCode :"",
+            phoneNumber :"",
+            secondNumber : ""
+
         }
     },
 
@@ -67,18 +86,5 @@ export default FormikOrderPage
 
 
 /*
-<section id="second" className="section">
-                <div className="container">
-                    <input type="checkbox" name="group2" id="checkbox-1" />
-                    <label for="checkbox-1"><span className="checkbox">Oranges</span></label>Name
-                </div>
-                <div class="container">
-                    <input type="checkbox" name="group2" id="checkbox-2" />
-                    <label for="checkbox-2"><span class="checkbox">Apples</span></label>
-                </div>
-                <div class="container">
-                    <input type="checkbox" name="group2" id="checkbox-3" />
-                    <label for="checkbox-3"><span class="checkbox">Avocados</span></label>
-                </div>
-            </section>
+    <a href="https://www.freepik.com/free-photos-vectors/background">Background photo created by mrsiraphol - www.freepik.com</a>
 */
