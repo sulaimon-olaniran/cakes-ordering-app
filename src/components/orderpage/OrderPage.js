@@ -17,9 +17,6 @@ const encode = (data) => {
   }
 
 const OrderPage = ({ values, errors, touched }) => {
-    const checking = () => {
-        console.log(values)
-    }
 
     return (
         <div className="form-container">
@@ -50,10 +47,10 @@ const OrderPage = ({ values, errors, touched }) => {
                 <div className="button-div">
                     <button type="submit">Place Order</button>
                 </div>
-                <div data-netlify-recaptcha="true"></div>
+                <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
             </Form>
    
-<button onClick={checking} >Click Me Click Me</button>
+
         </div>
     )
 
