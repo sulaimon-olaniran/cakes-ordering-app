@@ -20,7 +20,7 @@ const OrderPage = ({ values, errors, touched }) => {
                 <h2>Fill form to place an order</h2>
             </div>
 
-            <form className="form-field" name="Order-Form" method="POST" data-netlify="true" data-netlify-recaptcha="true" >
+            <form className="form-field" name="order" method="POST" data-netlify="true" data-netlify-recaptcha="true" >
                 <CakeTypes />
                 <CakeFill />
                 <CakeShapes />
