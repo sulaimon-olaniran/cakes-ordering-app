@@ -12,12 +12,14 @@ import Products from './components/products/Products';
 import AboutPage from './components/aboutpage/AboutPage';
 import FormikOrderPage from './components/orderpage/OrderPage';
 import FormikReadyMadeOrder from './components/orderpage/readyMadeCake/ReadyMadeForm';
+import TestFormPage from './TestFormPage';
 
 function App() {
   return (
     <AppContextProvider>
       <div className="App">
         <Router>
+          
           <BurgerContent />
           <Navbar />
           <Route exact path='/' component={Homepage} />
@@ -25,7 +27,7 @@ function App() {
           <Route exact path='/cupcakes' component={CupCakes} />
           <Route exact path='/products' component={Products} />
           <Route exact path='/about' component={AboutPage} />
-          <Route exact path='/order' component={FormikOrderPage} />
+          <Route exact path='/order' component={TestFormPage} />
           <Route exact path='/buycake' component={FormikReadyMadeOrder} />
 
           <Footer />
