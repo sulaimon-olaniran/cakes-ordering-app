@@ -28,7 +28,7 @@ const OrderPage = ({ values, errors, touched }) => {
                 <h2>Fill form to place an order</h2>
             </div>
 
-            <Form className="form-field" >
+            <Form className="form-field" data-netlify-recaptcha="true" >
                 <CakeTypes />
                 <CakeFill />
                 <CakeShapes />
@@ -50,7 +50,7 @@ const OrderPage = ({ values, errors, touched }) => {
                 <div className="button-div">
                     <button type="submit">Place Order</button>
                 </div>
-
+                <div data-netlify-recaptcha="true"></div>
             </Form>
    
 <button onClick={checking} >Click Me Click Me</button>
