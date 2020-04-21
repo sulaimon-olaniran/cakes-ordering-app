@@ -17,7 +17,9 @@ const encode = (data) => {
   }
 
 const OrderPage = ({ values, errors, touched }) => {
-
+    const checking = () => {
+        console.log(values)
+    }
 
     return (
         <div className="form-container">
@@ -50,8 +52,8 @@ const OrderPage = ({ values, errors, touched }) => {
                 </div>
 
             </Form>
-
-
+   
+<button onClick={checking} >Click Me Click Me</button>
         </div>
     )
 
@@ -164,7 +166,7 @@ const FormikOrderPage = withFormik({
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "contact", values })
+            body: encode({ "form-name": "contact", ...values })
           })
             .then(() => alert("Success!"))
             .catch(error => alert(error));
