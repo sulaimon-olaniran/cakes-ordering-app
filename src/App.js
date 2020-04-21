@@ -27,7 +27,7 @@ function App() {
           <Route exact path='/cupcakes' component={CupCakes} />
           <Route exact path='/products' component={Products} />
           <Route exact path='/about' component={AboutPage} />
-          <Route exact path='/order' component={TestFormPage} />
+          <Route exact path='/order' component={FormikOrderPage} />
           <Route exact path='/buycake' component={FormikReadyMadeOrder} />
 
           <Footer />

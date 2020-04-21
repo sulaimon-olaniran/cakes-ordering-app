@@ -31,9 +31,74 @@
   </head>
   <body>
     <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-      <input type="text" name="name" />
-      <input type="email" name="email" />
-      <textarea name="message"></textarea>
+        <input type="radio" name="cakeType" />
+        <input type="text" name="otherCake" />
+        <input type="radio" name="cakeFill" />
+        <input type="text" name="otherFill" />
+        <input type="radio" name="cakeShape" />
+        <input type="text" name="otherShape" />
+        <input type="radio" name="cakeFlavor" />
+        <input type="text" name="otherFlavor" />
+        <input type="radio" name="cakeIcing" />
+        <input type="text" name="otherIcing" />
+
+        <select  name="cakeSize"  >
+          <option value="" >Cake size</option>
+          <option value="6' inches" >6' inches</option>
+          <option value="8' inches" >8' inches</option>
+          <option value="10' inches" >10' inches</option>
+          <option value="12' inches" >12' inches</option>
+          <option value="14' inches" >14' inches</option>
+          <option value="18' inches" >18' inches</option>
+          <option value="20' inches" >20' inches</option>
+        </select>
+
+        <input type="text"  name="fullName" />
+        <input type="text"  name="cakeColor"  />
+        <textarea name="cakeMessage"></textarea>
+        <textarea name="specialRequest"></textarea>
+
+        <select  name="celebrantAge" >
+          <option value="">Age</option>
+          <option value="Child" >Child</option>
+          <option value="Teenager" >Teenager</option>
+          <option value="Adult" >Adult</option>
+        </select>
+
+        <select name="celebrantSex"  >
+          <option value="" >Sex </option>
+          <option value="Male" >Male</option>
+          <option value="Female" >Female</option>
+          <option value="Corperate" >Corperate</option>
+        </select>
+
+        <select  name="ocassion">
+          <option value="" >Ocassion</option>
+          <option value="Anniversary" >Anniversary</option>
+          <option value="Valentine" >Valentine</option>
+          <option value="Wedding" >Wedding</option>
+          <option value="Birthday" >Birthday</option>
+          <option value="Easter" >Easter</option>
+          <option value="New Year" >New year</option>
+          <option value="Other" >Other</option>
+
+        </select>
+     
+        <input type="date" name="eventDate" className="date-input" id="event-date" />
+
+        <input type="radio" name="deliveryType" />
+        <textarea name="houseAddress"></textarea>
+        <input name="text" name="city" />
+        <input name="text" name="state" />
+        <input type="text" name="postalCode"  />
+        <input type="tel" name="phoneNumber"  />
+        <input type="tel" name="secondNumber"  />
+
+
+
+
+
+
     </form>
 
     <noscript>You need to enable JavaScript to run this app.</noscript>

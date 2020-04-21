@@ -10,6 +10,12 @@ import CakeIcing from './cakeforms/CakeIcing'
 import OtherCakeInfo from './OtherCakeInfo'
 import DeliveryType from './cakeforms/DeliveryType'
 
+const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+  }
+
 const OrderPage = ({ values, errors, touched }) => {
 
 
@@ -20,7 +26,7 @@ const OrderPage = ({ values, errors, touched }) => {
                 <h2>Fill form to place an order</h2>
             </div>
 
-            <form className="form-field" name="order" method="POST" data-netlify="true" data-netlify-recaptcha="true" >
+            <Form className="form-field" >
                 <CakeTypes />
                 <CakeFill />
                 <CakeShapes />
@@ -43,7 +49,7 @@ const OrderPage = ({ values, errors, touched }) => {
                     <button type="submit">Place Order</button>
                 </div>
 
-            </form>
+            </Form>
 
 
         </div>
@@ -153,8 +159,16 @@ const FormikOrderPage = withFormik({
     handleSubmit(values) {
         if (values.cakeType !== "other") {
             values.otherCake = ""
-            console.log(values)
         }
+
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({ "form-name": "contact", values })
+          })
+            .then(() => alert("Success!"))
+            .catch(error => alert(error));
+    
 
     }
 
