@@ -1,5 +1,6 @@
 import React from 'react'
 import eachcake from './eachcake.jpg'
+import { NavLink } from 'react-router-dom'
 
 
 
@@ -14,7 +15,20 @@ const EachCake = () => {
             <div className="cake-details-con">
                 <h4>Cake's Name</h4>
                 <p>Cake's Price</p>
-                <button>Buy Cake</button>
+                <NavLink
+                    to={{
+                        pathname: '/buycake',
+                        state: {
+                            image :"https://picsum.photos/id/237/200/300",
+                            name : "Cake's Name Olaniran",
+                            price : "Cake's Price",
+                            size : [12, 14, 16, 20]
+                        }
+                    }
+                    }
+                >
+                    <button>Buy Cake</button>
+                </NavLink>
             </div>
 
         </div>

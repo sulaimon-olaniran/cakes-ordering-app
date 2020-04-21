@@ -10,7 +10,8 @@ import Cakes from './components/cakes/Cakes';
 import CupCakes from './components/cakes/CupCakes';
 import Products from './components/products/Products';
 import AboutPage from './components/aboutpage/AboutPage';
-import OrderPage from './components/orderpage/OrderPage';
+import FormikOrderPage from './components/orderpage/OrderPage';
+import FormikReadyMadeOrder from './components/orderpage/readyMadeCake/ReadyMadeForm';
 
 function App() {
   return (
@@ -20,11 +21,13 @@ function App() {
           <BurgerContent />
           <Navbar />
           <Route exact path='/' component={Homepage} />
-          <Route exact path='/cakes' component = {Cakes} />
-          <Route exact path='/cupcakes' component = {CupCakes} />
-          <Route exact path='/products' component = {Products} />
-          <Route exact path='/about' component = {AboutPage} />
-          <Route exact path='/order' component = {OrderPage} />
+          <Route exact path='/cakes' component={Cakes} />
+          <Route exact path='/cupcakes' component={CupCakes} />
+          <Route exact path='/products' component={Products} />
+          <Route exact path='/about' component={AboutPage} />
+          <Route exact path='/order' component={FormikOrderPage} />
+          <Route exact path='/buycake' component={FormikReadyMadeOrder} />
+
           <Footer />
         </Router>
       </div>

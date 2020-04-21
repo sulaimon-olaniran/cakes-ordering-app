@@ -9,12 +9,31 @@
 
 .form-field {
     width: 90%;
-    min-height: 80vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
    
 }
+
+.error-con{
+   width: 100%;
+   background-color: lightgrey;
+   border-radius: 25px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   padding: 2px;
+   margin-top: 20px;
+}
+.error-con p {
+    font-size: 1.1rem;
+    color: rgb(243, 92, 92);
+    margin: 2px;
+    text-align: center;
+}
+
 .page-header {
     width: 90%;
     height: 10vh;
@@ -254,13 +273,20 @@ option{
     transition: all 0.2s ease;
 }
 
-span [type="text"] {
-    display: none;
-}
 
 span [type="radio"]:checked ~ [type="text"] {
     display: block;
 }
+
+span [type="radio"]:not(:checked) ~ [type="text"] {
+    display: none;
+    
+}
+
+span [type="radio"]:not(:checked) ~ [type="text"]:after {
+   content: "hello world";
+}
+
 .delivery-rad [type="radio"]:checked ~ .address {
     height: 50vh;
     width: 100%;

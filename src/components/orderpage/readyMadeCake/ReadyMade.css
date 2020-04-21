@@ -1,0 +1,27 @@
+.cake-info {
+    width: 90%;
+    min-height: 70vh;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: ivory;
+    border-radius: 25px;
+    overflow: hidden;
+    
+}
+.cake-info h3{
+    color: rgb(88, 88, 88);
+}
+.cake-info-img {
+    width: 85%;
+    height: 55vh;
+    
+}
+
+.cake-info-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+}

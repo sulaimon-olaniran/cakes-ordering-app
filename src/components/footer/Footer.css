@@ -23,7 +23,7 @@ footer {
 .span{
     display: flex;
     width: 100%;
-    flex-direction: row !important;
+    flex-direction: row ;
 }
 
 .contact-con p, .about-con p{

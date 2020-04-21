@@ -1,7 +1,7 @@
 import React from 'react'
 import { Field } from 'formik'
 
-const CakeTypes = () => {
+const CakeTypes = ({error, touch}) => {
     return (
         <div className="cake-field">
             <div className="cake-field-title">
@@ -25,15 +25,16 @@ const CakeTypes = () => {
                 <label htmlFor="confetti">Confetti Cake</label><br />
 
                 <Field type="radio" name="cakeType" id="chocolateCake" value="chocolate cake" />
-                <label htmlFor="chocolateCake">Chocolate Cake</label><br />
+                <label htmlFor="chocolateCake" >Chocolate Cake</label><br />
                 <span >
                     <Field type="radio" name="cakeType" id="other-type" value="other" />
                     <label htmlFor="other-type" >other options </label><br />
-                    <Field placeholder="Others" name="otherCake" id="other" type="text" />
+                    <Field placeholder="Others" name="otherCake" id="other" type="text"  />
 
                 </span>
 
             </div>
+               
         </div>
     )
 }
