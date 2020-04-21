@@ -3,7 +3,7 @@ import React from 'react'
 const TestFormPage = () => {
 
     return (
-        <form name="contact" method="post">
+       {/* <form  method="post">
           <input type="hidden" name="form-name" value="contact" />
           <p>
             <label>Your Name: <input type="text" name="name"/></label>
@@ -17,7 +17,7 @@ const TestFormPage = () => {
           <p>
             <button type="submit">Send</button>
           </p>
-        </form>
+    </form>*/}
     )
 }
 
