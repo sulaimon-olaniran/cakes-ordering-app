@@ -63,8 +63,6 @@ const OrderPage = ({ values, errors, touched, setFieldValue }) => {
                 </div>
 
             </Form>
-
-            <img src={values.CakeSample} alt="blah blah" />
         </div>
     )
 
@@ -182,7 +180,7 @@ const FormikOrderPage = withFormik({
 
         fetch("/", {
             method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            //headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: encode({ "form-name": "contact", ...values })
         })
             .then(() => alert("Success!"))
