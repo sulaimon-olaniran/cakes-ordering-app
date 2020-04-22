@@ -12,10 +12,17 @@ import DeliveryType from './cakeforms/DeliveryType'
 import CakeSample from './cakeforms/CakeSample'
 
 const encode = (data) => {
-    return Object.keys(data)
+    /*return Object.keys(data)
         .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-        .join("&");
-  }
+        .join("&");*/
+    const formData = new FormData();
+
+    for (const key of Object.keys(data)) {
+        formData.append(key, data[key]);
+    }
+
+    return formData;
+}
 
 const OrderPage = ({ values, errors, touched, setFieldValue }) => {
 
@@ -38,7 +45,7 @@ const OrderPage = ({ values, errors, touched, setFieldValue }) => {
                 <CakeIcing />
                 <OtherCakeInfo />
                 <CakeSample setFieldValue={setFieldValue} />
-                
+
                 <DeliveryType />
                 {
                     Object.entries(errors).map(([key, value]) => {
@@ -54,10 +61,10 @@ const OrderPage = ({ values, errors, touched, setFieldValue }) => {
                 <div className="button-div">
                     <button type="submit">Place Order</button>
                 </div>
-               
+
             </Form>
-   
-             <img src={values.CakeSample} alt="blah blah" />
+
+            <img src={values.CakeSample} alt="blah blah" />
         </div>
     )
 
@@ -65,11 +72,11 @@ const OrderPage = ({ values, errors, touched, setFieldValue }) => {
 
 
 
-const FormikOrderPage = withFormik({ 
+const FormikOrderPage = withFormik({
     mapPropsToValues() {
         return {
-            orderCode : Math.random().toString(36).slice(-5),
-            cakeSample : "",
+            orderCode: Math.random().toString(36).slice(-5),
+            cakeSample: "",
             cakeType: "",
             otherCake: "",
             cakeFill: "",
@@ -88,7 +95,7 @@ const FormikOrderPage = withFormik({
             specialRequest: "",
             cakeMessage: "",
             cakeSize: "",
-            orderQuantity : 1 || "",
+            orderQuantity: 1 || "",
             eventDate: "",
             deliveryType: "",
             city: "",
@@ -170,17 +177,17 @@ const FormikOrderPage = withFormik({
             values.otherCake = ""
         }
         values.cakeSample = values.file.name
-       
+
         console.log(values)
 
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: encode({ "form-name": "contact", ...values })
-          })
+        })
             .then(() => alert("Success!"))
             .catch(error => alert(error));
-    
+
 
     }
 
