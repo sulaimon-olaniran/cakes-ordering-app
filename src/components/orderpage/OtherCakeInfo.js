@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Field } from 'formik'
 
-const OtherCakeInfo = ({setFieldValue}) => {
+const OtherCakeInfo = () => {
     const [count, setCount] = useState(1)
     const increment = () => {
         setCount(count + 1)

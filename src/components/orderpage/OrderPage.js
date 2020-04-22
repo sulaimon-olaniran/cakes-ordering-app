@@ -29,12 +29,14 @@ const OrderPage = ({ values, errors, touched, setFieldValue }) => {
                 <p>Order Code : {values.orderCode}</p>
             </div>
             <Form className="form-field" data-netlify-recaptcha="true" >
+                <input type="text" name="orderCode" hidden />
+                <input type="file" name="cakeSample" hidden />
                 <CakeTypes />
                 <CakeFill />
                 <CakeShapes />
                 <CakeFlavours />
                 <CakeIcing />
-                <OtherCakeInfo setFieldValue={setFieldValue}/>
+                <OtherCakeInfo />
                 <CakeSample setFieldValue={setFieldValue} />
                 
                 <DeliveryType />
