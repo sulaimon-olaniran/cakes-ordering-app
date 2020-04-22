@@ -9,7 +9,7 @@ const CakeIcing = () => {
     </div>
     <div className="cake-selection">
         <Field type="radio" name="cakeIcing" id="butter-icing" value="Buttercream" />
-        <label htmlFor="buter-icing">Buttercream</label><br />
+        <label htmlFor="butter-icing">Buttercream</label><br />
 
         <Field type="radio" name="cakeIcing" id="creamcheese-icing" value="Cream cheese" />
         <label htmlFor="creamcheese-icing">Cream cheese</label><br />

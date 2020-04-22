@@ -1,6 +1,6 @@
 import React from 'react'
 import './OrderPage.css'
-import { withFormik, Form } from 'formik'
+import { withFormik, Form, Field } from 'formik'
 import * as yup from 'yup'
 import CakeTypes from './cakeforms/CakeTypes'
 import CakeFill from './cakeforms/CakeFill'
@@ -9,6 +9,7 @@ import CakeFlavours from './cakeforms/CakeFlavours'
 import CakeIcing from './cakeforms/CakeIcing'
 import OtherCakeInfo from './OtherCakeInfo'
 import DeliveryType from './cakeforms/DeliveryType'
+import CakeSample from './cakeforms/CakeSample'
 
 const encode = (data) => {
     return Object.keys(data)
@@ -16,7 +17,7 @@ const encode = (data) => {
         .join("&");
   }
 
-const OrderPage = ({ values, errors, touched }) => {
+const OrderPage = ({ values, errors, touched, setFieldValue }) => {
 
     return (
         <div className="form-container">
@@ -24,14 +25,18 @@ const OrderPage = ({ values, errors, touched }) => {
             <div className="page-header">
                 <h2>Fill form to place an order</h2>
             </div>
-
+            <div className="order-code-con">
+                <p>Order Code : {values.orderCode}</p>
+            </div>
             <Form className="form-field" data-netlify-recaptcha="true" >
                 <CakeTypes />
                 <CakeFill />
                 <CakeShapes />
                 <CakeFlavours />
                 <CakeIcing />
-                <OtherCakeInfo />
+                <OtherCakeInfo setFieldValue={setFieldValue}/>
+                <CakeSample setFieldValue={setFieldValue} />
+                
                 <DeliveryType />
                 {
                     Object.entries(errors).map(([key, value]) => {
@@ -47,7 +52,7 @@ const OrderPage = ({ values, errors, touched }) => {
                 <div className="button-div">
                     <button type="submit">Place Order</button>
                 </div>
-                <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+               
             </Form>
    
 
@@ -58,9 +63,11 @@ const OrderPage = ({ values, errors, touched }) => {
 
 
 
-const FormikOrderPage = withFormik({
+const FormikOrderPage = withFormik({ 
     mapPropsToValues() {
         return {
+            orderCode : Math.random().toString(36).slice(-5),
+            cakeSample : "",
             cakeType: "",
             otherCake: "",
             cakeFill: "",
@@ -79,6 +86,7 @@ const FormikOrderPage = withFormik({
             specialRequest: "",
             cakeMessage: "",
             cakeSize: "",
+            orderQuantity : 1 || "",
             eventDate: "",
             deliveryType: "",
             city: "",
@@ -159,6 +167,9 @@ const FormikOrderPage = withFormik({
         if (values.cakeType !== "other") {
             values.otherCake = ""
         }
+        values.cakeSample = values.file
+       
+        console.log(values)
 
         fetch("/", {
             method: "POST",

@@ -1,7 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Field } from 'formik'
 
-const OtherCakeInfo = () => {
+const OtherCakeInfo = ({setFieldValue}) => {
+    const [count, setCount] = useState(1)
+    const increment = () => {
+        setCount(count + 1)
+    }
+
+    const decrement = () => {
+        setCount(count - 1)
+    }
     return (
         <div className="cake-field other-field">
             <div className="cake-field-title">
@@ -21,10 +29,13 @@ const OtherCakeInfo = () => {
 
                 </Field>
 
+                <Field type="number"  name="orderQuantity" placeholder="Quantity(1)" className="number-input" />
+
                 <Field type="text" placeholder="Full Name" name="fullName" className="full-name" />
                 <Field type="text" placeholder="Cake colour..." name="cakeColor" className="full-name" />
                 <Field component="textarea" name="cakeMessage" placeholder="Message on cake" className="text-area" rows="3" />
                 <Field component="textarea" name="specialRequest" placeholder="Special Requests" className="text-area" rows="3" />
+
 
                 <Field component="select" name="celebrantAge" id="age-group" className="select-box">
                     <option value="">Age</option>
@@ -53,7 +64,7 @@ const OtherCakeInfo = () => {
                 </Field>
                 <div>
                     <label htmlFor="event-date">Date of Ocassion</label>
-                <Field type="date" name="eventDate" className="date-input" id="event-date" />
+                    <Field type="date" name="eventDate" className="date-input" id="event-date" />
                 </div>
 
 
