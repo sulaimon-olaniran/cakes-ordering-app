@@ -57,7 +57,7 @@ const OrderPage = ({ values, errors, touched, setFieldValue }) => {
                
             </Form>
    
-
+             <img src={values.CakeSample} alt="blah blah" />
         </div>
     )
 
@@ -169,7 +169,7 @@ const FormikOrderPage = withFormik({
         if (values.cakeType !== "other") {
             values.otherCake = ""
         }
-        values.cakeSample = values.file
+        values.cakeSample = values.file.name
        
         console.log(values)
 
