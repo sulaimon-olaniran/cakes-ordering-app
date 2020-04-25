@@ -1,0 +1,39 @@
+.popup-content {
+  width: 55vh !important;
+  height: 90vh !important;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.popup-content button {
+    background: none;
+    border: none;
+    color: darksalmon;
+    font-size: 1rem;
+}
+
+.pop-message-con {
+    height: 85vh;
+    width: 55vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.pop-message {
+    height: 85vh;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+    list-style-type: circle;
+}
+
+.pop-message p {
+    color:rgb(63, 60, 60);
+    font-size: 1.1rem;
+}

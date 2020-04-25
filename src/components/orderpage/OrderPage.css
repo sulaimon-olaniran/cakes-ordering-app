@@ -7,6 +7,14 @@
     align-items: center;
 }
 
+
+[type="file"] {
+    width: 80%;
+    background: none ;
+    border: 2px solid salmon;
+}
+
+
 .form-field {
     width: 90%;
     min-height: 100vh;
@@ -42,7 +50,6 @@
     justify-content: center;
     align-items: center;
     border-radius: 25px;
-    margin-bottom: 10px;
 }
 .order-code-con p {
     font-size: 1.4rem;
@@ -73,15 +80,6 @@ h2 {
     align-items: center;
     margin-bottom: 20px;
 }
- .address-field {
-    min-height: 80vh;
-    width: 100%;
-    background-color: rgb(231, 225, 225);
-    border-radius: 35px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
- }
  .number-input{
      width: 17vh;
      height: 5vh;
@@ -91,6 +89,7 @@ h2 {
      padding: 3px;
      font-size: 1.1rem;
  }
+ 
 
 .cake-field-title{
     width: 80%;
@@ -182,10 +181,10 @@ h3 {
 
 .select-box {
     width: 80%;
-    height: 5vh;
+    height: 4vh;
     border: 2px salmon solid;
     background-color: transparent;
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: rgb(95, 93, 93);
 }
 
@@ -207,14 +206,6 @@ option{
     font-size: 1.2rem;
     text-align: center;
 }
-
-.other-info {
-    min-height: 85vh;
-}
-.other-field {
-    min-height: 105vh;
-}
-
 .pick-title {
     margin: 20px 0px 20px 0px ;
 }
@@ -241,15 +232,12 @@ option{
 .button-div button:hover{
     background-color: rgb(26, 25, 25);
 }
+.file-field p{
+    color: slategrey;
+    font-size: 0.8rem !important;
+  }
 
-
-
-
-
-
-
-
-
+/*Radio button styling*/
 
 
 [type="radio"]:checked,
@@ -311,7 +299,7 @@ span [type="radio"]:not(:checked) ~ [type="text"]:after {
 }
 
 .delivery-rad [type="radio"]:checked ~ .address {
-    height: 50vh;
+    height: 35vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -339,9 +327,6 @@ span [type="radio"]:not(:checked) ~ [type="text"]:after {
   color: rgb(110, 110, 110);
 }
 
-.address [type="text"] {
-    display: block;
-}
 
 .pick-address{
     display: none;
@@ -373,4 +358,46 @@ span [type="radio"]:not(:checked) ~ [type="text"]:after {
 
 [type="tel"]:focus{
     outline: none;
+}
+.form-container-wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+    html {
+      transform: rotate(-90deg);
+      transform-origin: left top;
+      width: 100vh;
+      overflow-x: hidden;
+      position: absolute;
+      top: 100%;
+      left: 0;
+    }
+  }
+@media(min-width : 968px){
+    
+    label{
+        font-size: 1rem;
+    }
+
+    .form-container{
+        width: 70%;
+        
+    }
+    .form-field{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .cake-field{
+        width: 40%;
+    }
+    .order-code-con {
+        width: 40vh;
+        margin-bottom: 20px;
+    }
 }

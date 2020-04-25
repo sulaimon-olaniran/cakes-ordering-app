@@ -5,7 +5,7 @@ const CakeTypes = ({error, touch}) => {
     return (
         <div className="cake-field">
             <div className="cake-field-title">
-                <h3>choose a cake</h3>
+                <h3>Cake types</h3>
             </div>
             <div className="cake-selection">
                 <Field type="radio" name="cakeType" id="yellow" value="yellow butter cake"

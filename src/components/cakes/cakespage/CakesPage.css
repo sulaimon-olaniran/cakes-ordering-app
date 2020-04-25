@@ -1,3 +1,10 @@
+.cake-page-div{
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
 .cake-page-con {
     min-height: 90vh;
     width: 100%;
@@ -55,4 +62,60 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+}
+
+@media(min-width : 500px) and (orientation: landscape) {
+    .cake-page-con{
+        width: 80%;
+    }
+    .each-cake-con {
+        width: 30%;
+    }
+    .cake-details-con button {
+        width: 7em;
+        height: 1.5rem;
+    }
+    .cake-details-con{
+        height: 25vh;
+    }
+}
+
+
+@media(min-width : 968px){
+    .cake-page-con{
+        width: 90%;
+    }
+    .image-con{
+        height: 25vh;
+    }
+    .each-cake-con{
+        width: 32%;
+    }
+    .cake-details-con {
+        height: 15vh;
+    }
+    .each-cake-con{
+        min-height: 40vh;
+    }
+    .cake-details-con button {
+        width: 10vh;
+        height: 3vh;
+    }
+}
+
+@media(min-width : 1068px){
+    .each-cake-con{
+        width: 22%;
+    }
+    .image-con{
+        height: 30vh;
+    }
+    .cake-details-con{
+        height: 20vh;
+    }
+    .cake-details-con button {
+        width: 15vh;
+        height: 5vh;
+        cursor: pointer;
+    }
 }

@@ -16,7 +16,9 @@
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+
     
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
@@ -30,7 +32,7 @@
     <title>React App</title>
   </head>
   <body>
-    <form name="contact" netlify netlify-honeypot="bot-field"  hidden>
+    <form name="cake-order" netlify netlify-honeypot="bot-field"  hidden>
         <input type="radio" name="cakeType" />
         <input type="text" name="otherCake" />
         <input type="radio" name="cakeFill" />
@@ -55,6 +57,7 @@
         
         <input type="number"  name="orderQuantity"  />
         <input type="text"  name="fullName" />
+        <input type="tel" name="buyerNumber"  />
         <input type="text"  name="cakeColor"  />
         <input type="text"  name="orderCode"  />
         <textarea name="cakeMessage"></textarea>
@@ -87,7 +90,7 @@
         </select>
      
         <input type="date" name="eventDate"  id="event-date" />
-
+        <input type="date" name="collectingDate"  id="event-date" />
         <input type="radio" name="deliveryType" />
         <textarea name="houseAddress"></textarea>
         <input type="text" name="city" />
@@ -95,24 +98,43 @@
         <input type="text" name="postalCode"  />
         <input type="tel" name="phoneNumber"  />
         <input type="tel" name="secondNumber"  />
-
-        <input  name="file" type="file" />
         <input type="file" name="cakeSample" />
 
 
-    </form>
+      </form>
 
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+      <form name="ready-made-form" netlify netlify-honeypot="bot-field"  hidden>
+        <input type="text" name="cakeName" />
+        <input type="number"  name="orderQuantity"  />
+        <input type="text"  name="buyerName" />
+        <input type="tel" name="buyerNumber"  />
+        <input type="text"  name="cakeColor"  />
+        <input type="text"  name="orderCode"  />
+        <input type="text"  name="orderCode"  />
+        <textarea name="cakeMessage"></textarea>
+        <textarea name="specialRequest"></textarea>
+        <input type="date" name="eventDate"  id="event-date" />
+        <input type="date" name="collectingDate"  id="event-date" />
+        <input type="radio" name="deliveryType" />
+        <textarea name="houseAddress"></textarea>
+        <input type="text" name="city" />
+        <input type="text" name="state" />
+        <input type="text" name="postalCode"  />
+        <input type="tel" name="phoneNumber"  />
+        <input type="tel" name="secondNumber"  />
+      </form>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+      <noscript>You need to enable JavaScript to run this app.</noscript>
+      <div id="root"></div>
+      <!--
+        This HTML file is a template.
+        If you open it directly in the browser, you will see an empty page.
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+        You can add webfonts, meta tags, or analytics to this file.
+        The build step will place the bundled scripts into the <body> tag.
+
+        To begin the development, run `npm start` or `yarn start`.
+        To create a production bundle, use `npm run build` or `yarn build`.
+      -->
   </body>
 </html>

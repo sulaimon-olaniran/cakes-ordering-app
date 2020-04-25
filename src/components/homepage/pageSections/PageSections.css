@@ -51,11 +51,37 @@ a {
     margin-bottom: 5px;
 }
 
-@media(min-width : 700px) and (orientation: landscape) {
-    
+@media(min-width : 500px) and (orientation: landscape) {
+    .cakes-section button, .cupcakes-section button {
+        width: 10rem;
+    } 
+    .cupcakes-section{
+        min-height: 100vh;
+        width: 80%;
+    }
+    .about-section {
+        width: 80%;
+    }
+    .cakes-section{
+        width: 80%;
+        min-height: 100vh;
+    }
 }
         
 
 @media(min-width : 968px){
+    .about-section{
+        width: 70%;
+    }
+
+    .cakes-section{
+        width: 70%;
+        min-height: 90vh;
+    }
+    
+    .cupcakes-section{
+        width: 70%;
+        min-height: 90vh;
+    }
 
 }

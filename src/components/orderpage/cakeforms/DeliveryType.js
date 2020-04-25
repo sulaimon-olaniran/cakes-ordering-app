@@ -4,9 +4,9 @@ import { Field } from 'formik'
 
 const DeliveryType = () => {
     return (
-        <div className="address-field">
+        <div className="cake-field">
 
-            <div className="cake-field-title pick-title">
+            <div className="cake-field-title">
                 <h3>Delivery / Pick Up</h3>
             </div>
 

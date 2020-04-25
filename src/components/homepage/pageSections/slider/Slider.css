@@ -26,3 +26,16 @@
     justify-content: center;
 
 }
+@media(min-width : 500px) and (orientation: landscape) {
+    .slide-img{
+        width: 70%;
+    }
+    .slider-container {
+        height: 70vh;
+    }
+}
+@media(min-width : 968px){
+    .slider-container{
+        height: 60vh;
+    }
+}

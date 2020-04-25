@@ -1,9 +1,11 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { AppContext } from '../../contexts/AppContext'
 import { NavLink } from 'react-router-dom'
 
 const BurgerLinks = () => {
-    const { burgerLink, closeBurger } = useContext(AppContext)
+    const { burgerLink, closeBurger, handleCakeLink, cakesLink } = useContext(AppContext)
+    
+    const cakeClass = cakesLink ? "cakes-link-con" : "hide-cake-link"
 
     let burgerClass = "link-drawer"
 
@@ -12,17 +14,32 @@ const BurgerLinks = () => {
     }
     return (
         <nav className={burgerClass} >
-            <button onClick={closeBurger}>close me</button>
-            <ul>
-                <NavLink to='/products'>
-                    <li>Products</li>
+            <div className="burger-button">
+                <button onClick={closeBurger}>close me</button>
+            </div>
+
+            <ul className="burger-link-con">
+                <NavLink to='/' onClick={closeBurger}>
+                    <li>Home</li>
                 </NavLink>
 
-                <NavLink to='/order'>
-                    <li>Order</li>
+                <li onClick={handleCakeLink}>Products </li>
+                    <ul className={cakeClass} >
+                        <NavLink to='/cakes' onClick={closeBurger}>
+                            <li>View Cakes</li>
+                        </NavLink>
+                        <NavLink to='/cupcakes' onClick={closeBurger}>
+                            <li>View Cupcakes</li>
+                        </NavLink>
+
+                    </ul>
+               
+
+                <NavLink to='/order' onClick={closeBurger}>
+                    <li>Create Order</li>
                 </NavLink>
 
-                <NavLink to='/about'>
+                <NavLink to='/about' onClick={closeBurger}>
                     <li>About</li>
                 </NavLink>
             </ul>

@@ -22,8 +22,11 @@ const AddedInfo = (props) => {
                      }
 
                 </Field>
+            
+                <Field type="text" placeholder="Buyer's Full Name" name="buyerName" className="full-name" />
+                <Field type="tel" name="buyerNumber" placeholder="Buyer's Number" />
 
-                <Field type="text" placeholder="Full Name" name="fullName" className="full-name" />
+                <label><Field type="number" name="orderQuantity" placeholder="Quantity(1)" className="number-input" /> Quantity of order</label>
                 <Field component="textarea" name="cakemessage" placeholder="Message on cake" className="text-area" rows="3" />
                 <Field component="textarea" name="specialRequest" placeholder="Special Requests" className="text-area" rows="3" />
 
@@ -55,6 +58,10 @@ const AddedInfo = (props) => {
                 <div>
                     <label htmlFor="event-date">Date of Ocassion</label>
                 <Field type="date" name="eventDate" className="date-input" id="event-date" />
+                </div>
+                <div>
+                    <label htmlFor="event-date">Prefered collection date</label>
+                    <Field type="date" name="collectionDate" className="date-input" id="event-date" />
                 </div>
 
 

@@ -1,6 +1,8 @@
 .link-drawer {
     display: flex;
-    flex-direction: column;
+    flex-direction: column ;
+    justify-content: flex-start;
+    align-items: center;
     height: 100%;
     background-color: whitesmoke;
     width: 70%;
@@ -10,6 +12,33 @@
     z-index: 99999;
     transform: translateX(100%);
     transition: transform 0.35s ease-out;
+
+}
+.cakes-link-con {
+  display: flex;
+  flex-direction: column;
+  height: 10vh;
+}
+.hide-cake-link {
+  display: none;
+}
+
+
+.burger-button {
+  width: 100%;
+  height: 10vh;
+}
+.burger-link-con {
+  width: 100%;
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.burger-link-con li {
+  font-size: 1.3rem;
+  color: rgb(107, 107, 107);
 }
 
 .link-drawer.open{
@@ -25,4 +54,9 @@
     height: 100%;
     background: rgba(160, 157, 157, 0.8);
     z-index: 9999;
+}
+
+.cakes-link-con li {
+  color: black ;
+  font-size: 1.1rem;
 }
