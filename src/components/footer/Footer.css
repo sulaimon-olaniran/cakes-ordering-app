@@ -1,6 +1,6 @@
 footer {
     background-color: rgb(124, 36, 36);
-    height: 70vh;
+    min-height: 55rem;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -8,22 +8,54 @@ footer {
     align-items: center;
 }
 
+.about-con {
+    width: 80%;
+    height: 30rem;
+}
+
+.about-message{
+    display: flex;
+    flex-direction: column;
+    height: 28rem;
+}
+
+hr {
+   border: 2px solid salmon;
+}
+
+.about-message p{
+    margin: 1rem;
+}
+
 .contact-con {
-    height: 30vh;
+    height: 8rem;
     width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     
 }
-.about-con {
-    height: 20vh;
-    width: 80%;
+
+.chat-con{
+     width: 80%;
+     height: 6rem;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+}
+
+.chat-icons{
+    display:flex;
+    width: 50%;
+    justify-content: space-around;
 }
 .span{
     display: flex;
     width: 100%;
     flex-direction: row ;
+}
+.address-icon{
+    height: 23px;
 }
 
 .contact-con p, .about-con p{
@@ -35,9 +67,16 @@ footer {
 }
 
 /*social media */
-.social-media {
+.social-media-con {
     display: flex;
+    flex-direction: column;
     width: 80%;
+    justify-content: space-around;
+}
+
+.social-media{
+    width: 100%;
+    display: flex;
     justify-content: space-around;
 }
 
@@ -77,3 +116,67 @@ footer {
       background: #125688;
       color: white;
     }
+
+    
+@media screen and (min-width: 300px) and (max-width: 700px) and (orientation: landscape){
+    footer {
+        flex-direction: row;
+        height: 15rem;
+        flex-wrap: wrap;
+    }
+
+    .social-media {
+        width: 10%;
+        height: 10rem;
+        flex-direction: column;
+    }
+
+    .contact-con{
+        width: 40%;
+    }
+}
+
+
+@media screen and (min-width: 700px) {
+    footer {
+        flex-direction: row;
+        height: 15rem;
+        flex-wrap: wrap;
+    }
+
+    .social-media {
+        width: 10%;
+        height: 10rem;
+        flex-direction: column;
+    }
+
+    .contact-con{
+        width: 40%;
+    }
+
+    .span{
+        width: 50%;
+    }
+}
+
+
+@media screen and (min-width: 940px) {
+    footer {
+        flex-direction: row;
+        height: 15rem;
+        flex-wrap: wrap;
+    }
+
+    .social-media {
+        flex-direction: row;
+        width: 20%;
+    }
+
+    .contact-con{
+        width: 30%;
+    }
+
+    .span{
+        width: 50%;
+    }
+}

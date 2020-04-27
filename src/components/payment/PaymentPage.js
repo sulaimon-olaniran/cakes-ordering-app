@@ -5,7 +5,7 @@ import Paystack from './Paystack'
 const PaymentPage = () => {
     return (
         <div>
-            <h1>Make Payment</h1>
+            <h1>Make Payment with Paystack</h1>
         <Paystack />
         </div>
     )
