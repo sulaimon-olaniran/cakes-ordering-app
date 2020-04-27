@@ -25,7 +25,7 @@ const Paystack =() => {
 
     return (
         <div>
-        <p>
+        
           <PaystackButton
             text="Make Payment"
             className="payButton"
@@ -39,7 +39,7 @@ const Paystack =() => {
             paystackkey={key}
             tag="button"
           />
-        </p>
+        
       </div>
     )
 }
