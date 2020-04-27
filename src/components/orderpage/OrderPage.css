@@ -44,12 +44,13 @@
 
 .order-code-con {
     width: 90%;
-    height: 8vh;
+    height: 3rem;
     background-color: rgb(236, 118, 97);
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 25px;
+    margin-bottom: 1rem;
 }
 .order-code-con p {
     font-size: 1.4rem;
@@ -57,7 +58,7 @@
 
 .page-header {
     width: 90%;
-    height: 10vh;
+    height: 3rem;
     background-image: linear-gradient(#ff9d2f, #ff6126);
     display: flex;
     justify-content: center;
@@ -70,7 +71,7 @@ h2 {
 }
 
 .cake-field{
-    min-height: 70vh;
+    min-height: 30rem;
     width: 100%;
     background-color: rgb(231, 225, 225);
     border-radius: 35px;
@@ -81,8 +82,8 @@ h2 {
     margin-bottom: 20px;
 }
  .number-input{
-     width: 17vh;
-     height: 5vh;
+     width: 5rem;
+     height: 1.5rem;
      background: none;
      border: none;
      border: 2px solid salmon;
@@ -93,7 +94,7 @@ h2 {
 
 .cake-field-title{
     width: 80%;
-    height: 8vh;
+    height: 3rem;
     background-color: rgb(236, 118, 97);
     display: flex;
     justify-content: center;
@@ -103,18 +104,12 @@ h2 {
 }
 
 .cake-selection {
-    min-height: 50vh;
+    min-height: 20rem;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     padding-left: 25px ;
-}
-
-.delivery-selection{
-    min-height: 50vh;
-    width: 100%;
-    padding-left: 30px;
 }
 
 .delivery-rad {
@@ -124,7 +119,7 @@ h2 {
 
 label{
     color: rgb(10, 7, 7);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 span {
@@ -167,7 +162,7 @@ h3 {
 
 .text-area {
     width: 80%;
-    height: 10vh;
+    height: 3rem;
     font-size: 1.2rem;
     padding: 5px;
     color: rgb(95, 93, 93);
@@ -181,7 +176,7 @@ h3 {
 
 .select-box {
     width: 80%;
-    height: 4vh;
+    height: 1.7rem;
     border: 2px salmon solid;
     background-color: transparent;
     font-size: 0.8rem;
@@ -201,7 +196,7 @@ option{
     width: 80%;
     background-color: transparent;
     border: 2px solid salmon;
-    height: 5vh;
+    height: 1.7rem;
     color: rgb(95, 93, 93);
     font-size: 1.2rem;
     text-align: center;
@@ -212,7 +207,7 @@ option{
 
 .button-div{
     width: 100%;
-    height: 10vh;
+    height: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -221,7 +216,7 @@ option{
 
 .button-div button {
     width: 200px;
-    height: 8vh;
+    height: 3.5rem;
     background: transparent;
     border: none;
     border: 2px solid rgb(92, 91, 91);
@@ -232,6 +227,11 @@ option{
 .button-div button:hover{
     background-color: rgb(26, 25, 25);
 }
+
+.button-div button::after{
+    outline: none;
+}
+
 .file-field p{
     color: slategrey;
     font-size: 0.8rem !important;
@@ -299,18 +299,21 @@ span [type="radio"]:not(:checked) ~ [type="text"]:after {
 }
 
 .delivery-rad [type="radio"]:checked ~ .address {
-    height: 35vh;
+    height: 18rem;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
+.delivery-con{
+    justify-content: flex-start !important;
+}
 
 
 .pickup-rad [type="radio"]:checked ~ .pick-address {
-    margin-top: 30px;
+    margin-top: 20px;
     width: 80%;
-    height: 35vh;
+    height: 18rem;
     border: 2px solid salmon;
     padding: 3px;
     display: flex;
@@ -366,18 +369,68 @@ span [type="radio"]:not(:checked) ~ [type="text"]:after {
     align-items: center;
 }
 
+/* orientation mode on devices */
 @media screen and (min-width: 300px) and (max-width: 900px) and (orientation: landscape) {
-    html {
-      transform: rotate(-90deg);
-      transform-origin: left top;
-      width: 100vh;
-      height: 100vh;
-      overflow-x: hidden;
-      position: absolute;
-      top: 100%;
-      left: 0;
+     .form-container{
+         width: 80%;
+     }
+     .cake-field{
+         width: 45%;
+         min-height: 25rem;
+     }
+     .cake-selection{
+         min-height: 20rem;
+     }
+     .form-field{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
     }
+    h3{
+        font-size: 1rem;
+    }
+    .cake-field-title {
+        height: 2rem;
+    }
+    .pickup-rad [type="radio"]:checked ~ .pick-address {
+        width: 90%;
+        height: 15rem;
+        margin-top: 15px;
+        padding: 5px;
+    }
+    p{
+        font-size: 0.8rem;
+    }
+    .pick-address p, h4{
+       font-size: 0.8rem;
+    }
+    label {
+        font-size: 1rem;
+    }
+    [type="text"] {
+        font-size: 0.8rem;
+    }
+    
+   .delivery-rad [type="radio"]:checked ~ .address {
+       height: 16rem;
+   }
   }
+
+@media(min-width : 738px){
+    .form-container{
+        width: 80%;
+    }
+    .cake-field{
+        width: 80%;
+    }
+    .form-field{
+        align-items: center;
+    }
+}
+
+
+
 @media(min-width : 968px){
     
     label{

@@ -10,7 +10,7 @@ const DeliveryType = () => {
                 <h3>Delivery / Pick Up</h3>
             </div>
 
-            <div className="delivery-selection">
+            <div className="cake-selection delivery-con">
                 <span className="pickup-rad">
                     <Field type="radio" name="deliveryType" id="collection" value="Pick Up" />
                     <label htmlFor="collection">Pick Up</label>

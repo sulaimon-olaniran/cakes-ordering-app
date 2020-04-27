@@ -23,27 +23,10 @@ const AddedInfo = (props) => {
 
                 </Field>
             
-                <Field type="text" placeholder="Buyer's Full Name" name="buyerName" className="full-name" />
-                <Field type="tel" name="buyerNumber" placeholder="Buyer's Number" />
-
-                <label><Field type="number" name="orderQuantity" placeholder="Quantity(1)" className="number-input" /> Quantity of order</label>
                 <Field component="textarea" name="cakemessage" placeholder="Message on cake" className="text-area" rows="3" />
                 <Field component="textarea" name="specialRequest" placeholder="Special Requests" className="text-area" rows="3" />
 
-                <Field component="select" name="celebrantAge" id="age-group" className="select-box">
-                    <option value="">Age</option>
-                    <option value="Child" >Child</option>
-                    <option value="Teenager" >Teenager</option>
-                    <option value="Adult" >Adult</option>
-                </Field>
-
-                <Field component="select" name="celebrantSex" className="select-box" >
-                    <option value="" >Sex </option>
-                    <option value="Male" >Male</option>
-                    <option value="Female" >Female</option>
-                    <option value="Corperate" >Corperate</option>
-                </Field>
-
+               
                 <Field component="select" name="ocassion" className="select-box" >
                     <option value="" >Ocassion</option>
                     <option value="Anniversary" >Anniversary</option>
@@ -55,15 +38,7 @@ const AddedInfo = (props) => {
                     <option value="Other" >Other</option>
 
                 </Field>
-                <div>
-                    <label htmlFor="event-date">Date of Ocassion</label>
-                <Field type="date" name="eventDate" className="date-input" id="event-date" />
-                </div>
-                <div>
-                    <label htmlFor="event-date">Prefered collection date</label>
-                    <Field type="date" name="collectionDate" className="date-input" id="event-date" />
-                </div>
-
+                
 
             </div>
         </div>

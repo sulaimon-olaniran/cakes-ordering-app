@@ -23,6 +23,10 @@ const BurgerLinks = () => {
                     <li>Home</li>
                 </NavLink>
 
+                <NavLink to='/payment' onClick={closeBurger}>
+                    <li>Payment</li>
+                </NavLink> 
+
                 <li onClick={handleCakeLink}>Products </li>
                     <ul className={cakeClass} >
                         <NavLink to='/cakes' onClick={closeBurger}>

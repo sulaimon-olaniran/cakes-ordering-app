@@ -11,6 +11,7 @@ import CupCakes from './components/cakes/CupCakes';
 import AboutPage from './components/aboutpage/AboutPage';
 import FormikOrderPage from './components/orderpage/OrderPage';
 import FormikReadyMadeOrder from './components/orderpage/readyMadeCake/ReadyMadeForm';
+import PaymentPage from './components/payment/PaymentPage';
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
           <Route exact path='/about' component={AboutPage} />
           <Route exact path='/order' component={FormikOrderPage} />
           <Route exact path='/buycake' component={FormikReadyMadeOrder} />
-
+          <Route exact path='/payment' component={PaymentPage} />
           <Footer />
         </Router>
       </div>

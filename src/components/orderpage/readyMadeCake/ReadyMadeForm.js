@@ -5,6 +5,7 @@ import AddedInfo from './AddedInfo'
 import './ReadyMade.css'
 import PopMessage from './popup/PopMessage'
 import { ReadyMadeValidation } from './ReadyMadeValidation'
+import BuyerInfo from '../cakeforms/BuyerInfo'
 
 
 const encode = (data) => {
@@ -33,6 +34,7 @@ const ReadyMadeForm = ({ values,errors, location }) => {
     
 
     return (
+        <div className="form-container-wrapper">
         <div className="form-container">
          
          <PopMessage closePopup={closePopup} popupMessage={popupMessage} />
@@ -47,6 +49,7 @@ const ReadyMadeForm = ({ values,errors, location }) => {
             </div>
             <Form className="form-field">
                 <AddedInfo size={size} />
+                <BuyerInfo />
                 <DeliveryType />
                 {
                     Object.entries(errors).map(([key, value]) => {
@@ -63,6 +66,7 @@ const ReadyMadeForm = ({ values,errors, location }) => {
                 </div>
             </Form>
 
+        </div>
         </div>
     )
 

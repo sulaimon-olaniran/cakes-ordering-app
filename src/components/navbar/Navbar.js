@@ -14,8 +14,17 @@ const Navbar = () => {
             </div>
             <div className="links-container">
                 <ul>
-                    <NavLink to='/products'>
-                        <li>Products</li>
+                    <NavLink to='/'>
+                        <li>Home</li>
+                    </NavLink>
+                    <NavLink to='/payment' >
+                        <li>Payment</li>
+                    </NavLink>
+                    <NavLink to='/cakes'>
+                        <li>Cakes</li>
+                    </NavLink>
+                    <NavLink to='/cupcakes' >
+                        <li>Cupcakes</li>
                     </NavLink>
 
                     <NavLink to='/order'>
