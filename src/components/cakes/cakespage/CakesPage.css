@@ -114,20 +114,23 @@
     }
 }
 
-@media(min-width : 1068px){
+@media(min-width : 1200px){
+    .cake-page-con{
+        width: 70%;
+    }
     .each-cake-con{
         width: 22%;
-        min-height: 25rem;
+        min-height: 23rem;
     }
     .image-con{
-        height: 15rem;
+        height: 13rem;
     }
     .cake-details-con{
         height: 10rem;
     }
     .cake-details-con button {
         width: 8rem;
-        height: 2.5rem;
+        height: 2rem;
         cursor: pointer;
     }
 }

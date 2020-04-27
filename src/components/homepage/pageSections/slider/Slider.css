@@ -39,3 +39,10 @@
         height: 60vh;
     }
 }
+
+
+@media(min-width : 1200px){
+    .slide-img{
+        width: 60%;
+    }
+}

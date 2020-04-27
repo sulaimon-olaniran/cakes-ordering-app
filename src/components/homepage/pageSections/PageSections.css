@@ -3,7 +3,7 @@
     background-color: bisque;
     min-height: 90vh;
     width: 100%;
-    background-position: top;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -84,4 +84,21 @@ a {
         min-height: 90vh;
     }
 
+}
+
+@media(min-width : 1200px){
+    .about-section{
+        width: 60%;
+        background-position: bottom;
+    }
+
+    .cakes-section{
+        width: 60%;
+        min-height: 90vh;
+    }
+    
+    .cupcakes-section{
+        width: 60%;
+        min-height: 90vh;
+    }
 }

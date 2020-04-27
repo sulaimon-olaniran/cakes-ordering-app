@@ -121,10 +121,28 @@ hr {
 @media screen and (min-width: 300px) and (max-width: 700px) and (orientation: landscape){
     footer {
         flex-direction: row;
-        height: 15rem;
         flex-wrap: wrap;
+        min-height: 40rem ;
+    }
+    .about-con{
+        height: 18rem;
+    }
+    .about-message{
+        height: 16rem;
     }
 
+    .chat-con{
+        width: 20%;
+        height: 10rem;
+    }
+    .chat-icons{
+        width: 80%;
+        height: 9rem;
+        align-items: center;
+    }
+   .social-media-con{
+       width: 15%;
+   }
     .social-media {
         width: 10%;
         height: 10rem;
@@ -137,13 +155,32 @@ hr {
 }
 
 
-@media screen and (min-width: 700px) {
+@media (min-width: 700px) {
     footer {
         flex-direction: row;
-        height: 15rem;
         flex-wrap: wrap;
+        min-height: 35rem ;
     }
-
+    .about-con {
+        width: 70%;
+        height: 20rem;
+    }
+    .about-message{
+        height: 18rem;
+    }
+    
+    .chat-con{
+        width: 20%;
+        height: 10rem;
+    }
+    .chat-icons{
+        width: 80%;
+        height: 9rem;
+        align-items: center;
+    }
+     .social-media-con{
+         width: 15%;
+     }
     .social-media {
         width: 10%;
         height: 10rem;
@@ -151,32 +188,90 @@ hr {
     }
 
     .contact-con{
-        width: 40%;
+        width: 35%;
     }
 
-    .span{
-        width: 50%;
-    }
 }
 
 
 @media screen and (min-width: 940px) {
     footer {
         flex-direction: row;
-        height: 15rem;
+        min-height: 40rem;
         flex-wrap: wrap;
     }
-
-    .social-media {
-        flex-direction: row;
+    
+    .about-con {
+        width: 70%;
+        height: 20rem;
+    }
+    .about-message{
+        height: 18rem;
+    }
+    
+    .chat-con{
         width: 20%;
+        height: 10rem;
+    }
+    .chat-icons{
+        width: 80%;
+        height: 9rem;
+        align-items: center;
+    }
+     .social-media-con{
+         width: 15%;
+     }
+    .social-media {
+        width: 10%;
+        height: 10rem;
+        flex-direction: column;
+    }
+
+    .contact-con{
+        width: 35%;
+    }
+
+}
+
+
+@media screen and (min-width: 1200px) {
+    footer {
+        flex-direction: row;
+        min-height: 35rem;
+        flex-wrap: wrap;
+    }
+    
+    .about-con {
+        width: 75%;
+        height: 20rem;
+    }
+    .about-message{
+        height: 18rem;
+        width: 90%;
+    }
+    
+    .chat-con{
+        width: 20%;
+        height: 10rem;
+    }
+    .chat-icons{
+        width: 80%;
+        height: 9rem;
+        align-items: center;
+    }
+     .social-media-con{
+         width: 30%;
+     }
+    .social-media {
+        width: 80%;
+        height: 10rem;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
     }
 
     .contact-con{
         width: 30%;
     }
 
-    .span{
-        width: 50%;
-    }
 }
