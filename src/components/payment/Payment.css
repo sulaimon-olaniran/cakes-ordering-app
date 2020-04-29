@@ -1,5 +1,5 @@
 .payment-con {
-    min-height: 90vh;
+    min-height: 100vh;
     width: 100%;
     background-color: coral;
     display: flex;
@@ -8,34 +8,65 @@
     justify-content: space-around;
 }
 .payment-form-con{
-    width: 80%;
-    height: 18rem;
+    width: 90%;
+    height: 33rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    overflow: hidden;
+    margin: 10px 0px;
 }
 .instructions{
-    height: 12rem;
-    width: 90%;
+    height: 15rem;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
+    background-color: rgb(61, 59, 59);
+    padding: 10px;
 }
+.bank-account{
+    width: 90%;
+    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(61, 59, 59);
+    border-radius: 25px;
+    margin: 10px 0px;
+}
+ hr {
+     width: 100%;
+     border: 2px solid saddlebrown;
+ }
 
-.instructions p{
+.instructions li{
     font-size: 1.1rem;
+    color: rgb(184, 182, 182);
+}
+.instructions{
+    list-style-type: circle ;
 }
 .payment-form {
     width: 100%;
-    height: 18rem;
+    height: 20rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     background-color:#e7e1e1;
-    border-radius: 25px;
+}
+.payment-field{
+  width: 90%;
+  height: 4rem;
 }
 
-.payment-field, .payment-field-money {
-    width: 80%;
+.payment-field input {
+    width: 100% !important;
     background: none;
     border: none;
     border-bottom: 2px solid saddlebrown;
@@ -43,11 +74,22 @@
     font-size: 1.2rem;
     padding: 3px;
 }
-.payment-field-money{
-  width: 50%;
+.payment-form input{
+    margin: 7px 0px;
+    width: 90%;
+    background: none;
+    border: none;
+    border-bottom: 2px solid saddlebrown;
+    color: rgb(97, 95, 95);
+    font-size: 1.2rem;
+    padding: 3px;
 }
-.payment-field:focus, .payment-field-money:focus{
-    background-color: rgb(212, 236, 212);
+
+.payment-field-money{
+  width: 80%;
+  height: 4rem;
+}
+.payment-field input:focus, .payment-form input:focus, .payment-field-money input:focus{
     outline: none;
 }
 .payment-form p {
@@ -63,7 +105,9 @@
     border: 2px solid sienna;
     border-radius: 25px;
     font-size: 1.1rem;
+    background-color: rgb(61, 59, 59);;
     color: rgb(233, 232, 232);
+    margin-bottom: 10px;
 }
 .payButton::after{
     outline: none;

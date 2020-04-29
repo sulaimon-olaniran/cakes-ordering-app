@@ -19,8 +19,8 @@ const EachCake = () => {
                     to={{
                         pathname: '/buycake',
                         state: {
-                            image :"https://picsum.photos/id/237/200/300",
-                            name : "Cake's Name Olaniran",
+                            image :"https://picsum.photos/id/152/200/300",
+                            name : "Cake's Name",
                             price : "Cake's Price",
                             size : [12, 14, 16, 20]
                         }

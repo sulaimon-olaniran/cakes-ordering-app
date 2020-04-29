@@ -4,11 +4,11 @@ import PaystackButton from 'react-paystack'
 
 const key = "pk_test_41ee8583da081526072608e37e6daff1dd0b9cec"
 const Paystack = ({buyer, number, email, code, amount}) => {
-    const disabled = buyer === "" || code === "" ? true : false
-    //const convertedAmout = amount * 100;
+    const disabled = buyer === "" || code === "" ||amount === "" ? true : false
     const callback = (response) => {
         console.log(response); // card charged successfully, get reference here
     }
+    
 
     const close = () => {
         console.log("Payment closed");
@@ -28,6 +28,7 @@ const Paystack = ({buyer, number, email, code, amount}) => {
     return (
 
         <div>
+
             <p>
                 <PaystackButton
                     metadata={{
@@ -35,18 +36,18 @@ const Paystack = ({buyer, number, email, code, amount}) => {
                             {
                                 "display_name" : "Mobile Number",
                                 "variable_name" : "mobile_number",
-                                "value" : {number} 
+                                "value" : number
                             },
                         
                             {
                                 "display_name" : "Buyer Name",
                                 "variable_name" : "buyer_name",
-                                "value" : {buyer}
+                                "value" : buyer
                             }, 
                             {
                                 "display_name" : "Order Code",
                                 "variable_name" : "order_code",
-                                "value" : {code} 
+                                "value" : code
                             },
                         ]
                     }}
