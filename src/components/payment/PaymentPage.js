@@ -8,6 +8,7 @@ import * as yup from 'yup'
 const PaymentPage = ({ values, errors, touched }) => {
     const { buyerName, buyerEmail, buyerNumber, orderCode, amount } = values
     return (
+        <div className="payment-con-wrapper">
         <div className="payment-con">
             <div className="bank-account">
                 <h3>Pay to bank account</h3>
@@ -43,6 +44,7 @@ const PaymentPage = ({ values, errors, touched }) => {
                 </Form>
             </div>
             <Paystack buyer={buyerName} number={buyerNumber} email={buyerEmail} code={orderCode} amount={amount} />
+        </div>
         </div>
     )
 }

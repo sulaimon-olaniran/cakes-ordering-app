@@ -30,11 +30,6 @@ const Navbar = () => {
                     <NavLink to='/order'>
                         <li>Order</li>
                     </NavLink>
-
-                    <NavLink to='/about'>
-                        <li>About</li>
-                    </NavLink>
-
                 </ul>
             </div>
 

@@ -8,7 +8,6 @@ import AppContextProvider from './components/contexts/AppContext';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Cakes from './components/cakes/Cakes';
 import CupCakes from './components/cakes/CupCakes';
-import AboutPage from './components/aboutpage/AboutPage';
 import FormikOrderPage from './components/orderpage/OrderPage';
 import FormikReadyMadeOrder from './components/orderpage/readyMadeCake/ReadyMadeForm';
 import PaymentPage from './components/payment/PaymentPage';
@@ -24,7 +23,6 @@ function App() {
           <Route exact path='/' component={Homepage} />
           <Route exact path='/cakes' component={Cakes} />
           <Route exact path='/cupcakes' component={CupCakes} />
-          <Route exact path='/about' component={AboutPage} />
           <Route exact path='/order' component={FormikOrderPage} />
           <Route exact path='/buycake' component={FormikReadyMadeOrder} />
           <Route exact path='/payment' component={PaymentPage} />

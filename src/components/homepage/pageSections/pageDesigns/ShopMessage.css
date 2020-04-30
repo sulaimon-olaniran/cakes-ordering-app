@@ -1,0 +1,162 @@
+.animation-box {
+    width: 100%;
+    height: 8rem;
+    background-color: rgba(0,0,0,0.5);
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+@keyframes topFadeOut {
+    0% {
+        position: absolute;
+        top: -3rem;
+        opacity: 0;
+    }
+
+    75% {
+        position: absolute;
+        top: 25%;
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes bottomFadeOut {
+    0% {
+        position: absolute;
+        bottom: -5rem;
+        opacity: 0;
+    }
+
+    75% {
+        position: absolute;
+        bottom: 25%;
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
+
+@keyframes topFadeOutVertical {
+    0% {
+        position: absolute;
+        top: -3rem;
+        opacity: 0;
+    }
+
+    75% {
+        position: absolute;
+        top: 45%;
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes rightFadeInOut {
+    0% {
+        position: absolute;
+        right: -3rem;
+        opacity: 0;
+    }
+
+    75% {
+        position: absolute;
+        right: 5rem;
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        right: 5rem;
+    }
+}
+ 
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+
+    45% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0%;
+    }
+}
+
+.first-text {
+    font-size: 1.5rem;
+    position: absolute;
+    left: 2.5rem;
+    top: 5rem;
+    opacity: 0;
+    animation-name: topFadeOut;
+    animation-duration: 5s;
+    color: white;
+}
+
+.second-text {
+    font-size: 1.3rem;
+    position: absolute;
+    top: 4rem;
+    opacity: 0;
+    animation-name: rightFadeInOut;
+    animation-delay: 3s;
+    animation-duration: 6s;
+    color: #ccc;
+}
+
+.third-text {
+    font-size: 1.2rem;
+    position: absolute;
+    top: 2rem;
+    opacity: 0;
+    animation-name: rightFadeInOut;
+    animation-delay: 7.5s;
+    animation-duration: 6s;
+    color: #A3DDF0;
+}
+
+.fourth-text {
+    font-size: 1.3rem;
+    position: absolute;
+    top: 4.5rem;
+    left: 10%;
+    opacity: 0;
+    color: #F0A3BE;
+    animation-name: fadeInOut;
+    animation-delay: 11.7s;
+    animation-duration: 9s;
+}
+
+.fifth-text {
+    font-size: 1.2rem;
+    position: absolute;
+    left: 5%;
+    bottom: 25%;
+    opacity: 0;
+    color: #F0EBA3;
+    animation-name: bottomFadeOut ;
+    animation-delay: 14s;
+    animation-duration: 9s;
+
+}
+
+  
+@media(min-width : 968px){
+    .animation-box {
+        width: 50%;
+        height: 10rem;
+    }
+}

@@ -12,7 +12,6 @@ import { MainOrderValidation } from './OrderValidation'
 import PopupInfo from './popups/PopupInfo'
 import BuyerInfo from './cakeforms/BuyerInfo'
 
-
 const encode = (data) => {
     const formData = new FormData();
     for (const key of Object.keys(data)) {
@@ -122,17 +121,26 @@ const FormikOrderPage = withFormik({
         if (values.cakeType !== "other") {
             values.otherCake = ""
         }
-
         values.cakeSample = values.file
+        
+        const removedValues = ["", undefined]
+        const filteredObject = {};
+        for(let e in values) {
+            if (values.hasOwnProperty(e)) {
+              if (removedValues.indexOf(values[e]) == -1) {
+                  filteredObject[e] = values[e];
+              }
+            }
+        }
 
-        console.log(values)
+        console.log(filteredObject)
 
         fetch("/", {
             method: "POST",
-            body: encode({ "form-name": "cake-order", ...values })
+            body: encode({ "form-name": "cake-order", ...filteredObject })
         })
             .then(() => alert("Success!"))
-            .catch(error => alert(error));
+            .catch(error => alert(error))
 
 
     }

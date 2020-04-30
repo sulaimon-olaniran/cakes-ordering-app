@@ -101,10 +101,21 @@ const FormikReadyMadeOrder = withFormik({
     validationSchema : ReadyMadeValidation,
 
     handleSubmit(values) {
-        console.log(values)
+        const removedValues = ""
+        const filteredObject = {};
+
+        for(let e in values) {
+            if (values.hasOwnProperty(e)) {
+              if (removedValues.indexOf(values[e]) == -1) {
+                  filteredObject[e] = values[e];
+              }
+            }
+        }
+        console.log(filteredObject)
+
         fetch("/", {
             method: "POST",
-            body: encode({ "ready-made-form": "cake-order", ...values })
+            body: encode({ "ready-made-form": "cake-order", ...filteredObject })
         })
             .then(() => alert("Success!"))
             .catch(error => alert(error));

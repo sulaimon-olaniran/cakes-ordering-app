@@ -38,13 +38,8 @@ const BurgerLinks = () => {
 
                     </ul>
                
-
                 <NavLink to='/order' onClick={closeBurger}>
                     <li>Create Order</li>
-                </NavLink>
-
-                <NavLink to='/about' onClick={closeBurger}>
-                    <li>About</li>
                 </NavLink>
             </ul>
         </nav>
