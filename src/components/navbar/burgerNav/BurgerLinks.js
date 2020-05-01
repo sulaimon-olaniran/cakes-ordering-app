@@ -15,7 +15,7 @@ const BurgerLinks = () => {
     return (
         <nav className={burgerClass} >
             <div className="burger-button">
-                <button onClick={closeBurger}>close me</button>
+                <button onClick={closeBurger}>X</button>
             </div>
 
             <ul className="burger-link-con">

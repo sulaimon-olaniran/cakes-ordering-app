@@ -449,9 +449,18 @@ span [type="radio"]:not(:checked) ~ [type="text"]:after {
     }
     .cake-field{
         width: 40%;
+        min-height: 27rem;
     }
     .order-code-con {
         width: 40vh;
         margin-bottom: 20px;
+    }
+    .pickup-rad [type="radio"]:checked ~ .pick-address {
+        width: 90%;
+        height: 15rem;
+       
+    }
+    .delivery-rad [type="radio"]:checked ~ .address {
+        height: 15rem;
     }
 }

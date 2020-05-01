@@ -30,7 +30,7 @@ const BuyerInfo = ({ error, touch }) => {
                     <p style={{color:"darkgray"}}>Prefered collection date</p>
                     <Field type="date" name="collectionDate" className="date-input" id="event-date" />
                 </div>
-                <Field type="text" placeholder="Buyer's Fullname" name="fullName" className="full-name" style={{fontSize:"0.8rem"}} />
+                <Field type="text" placeholder="Buyer's Fullname" name="buyerName" className="full-name" style={{fontSize:"0.8rem"}} />
                 <Field type="tel" name="buyerNumber" placeholder="Buyer's Number" />
 
             </div>

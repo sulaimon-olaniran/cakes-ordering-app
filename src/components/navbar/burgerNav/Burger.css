@@ -28,6 +28,13 @@
   width: 100%;
   height: 10vh;
 }
+.burger-button button {
+  font-size: 3rem;
+  width: 3rem;
+  margin-right: 10px;
+  background: none;
+  border: none;
+}
 .burger-link-con {
   width: 100%;
   height: 45vh;

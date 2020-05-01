@@ -21,7 +21,7 @@ const EachCake = () => {
                         state: {
                             image :"https://picsum.photos/id/152/200/300",
                             name : "Cake's Name",
-                            price : "Cake's Price",
+                            price : 7000,
                             size : [12, 14, 16, 20]
                         }
                     }

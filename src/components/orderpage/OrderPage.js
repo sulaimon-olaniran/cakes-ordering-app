@@ -11,6 +11,8 @@ import DeliveryType from './cakeforms/DeliveryType'
 import { MainOrderValidation } from './OrderValidation'
 import PopupInfo from './popups/PopupInfo'
 import BuyerInfo from './cakeforms/BuyerInfo'
+import SuccessPop from './submissionPopup/SuccesPop'
+import FailurePop from './submissionPopup/FailurePop'
 
 const encode = (data) => {
     const formData = new FormData();
@@ -21,9 +23,10 @@ const encode = (data) => {
     return formData;
 }
 
-const OrderPage = ({ values, errors, touched, setFieldValue }) => {
-    const [popupMessage, setPopupMessage] = useState(false)
 
+const OrderPage = ({ values, errors, touched, setFieldValue, isSubmitting, status, setStatus }) => {
+    const [popupMessage, setPopupMessage] = useState(false)
+ 
     useEffect(() => {
         setPopupMessage(true)
 
@@ -32,11 +35,18 @@ const OrderPage = ({ values, errors, touched, setFieldValue }) => {
     const closePopup = () => {
         setPopupMessage(false)
     }
+    const closeUp = () => {
+        setStatus({success: false})
+        setStatus({failure: false})
+    }
 
     return (
         <div className="form-container-wrapper">
             <div className="form-container">
                 <PopupInfo closePopup={closePopup} popupMessage={popupMessage} />
+                <SuccessPop closePopup={closeUp} success={status ? status.success : false} />
+                <FailurePop closePopup={closeUp} failure={status? status.failure : false} />
+                
                 <div className="page-header">
                     <h2>Fill form to place an order</h2>
                 </div>
@@ -66,7 +76,7 @@ const OrderPage = ({ values, errors, touched, setFieldValue }) => {
 
                     }
                     <div className="button-div">
-                        <button type="submit">Place Order</button>
+                        <button type="submit" disabled={isSubmitting}>Place Order</button>
                     </div>
 
                 </Form>
@@ -74,7 +84,7 @@ const OrderPage = ({ values, errors, touched, setFieldValue }) => {
         </div>
     )
 
-}
+}   
 
 
 
@@ -103,7 +113,7 @@ const FormikOrderPage = withFormik({
             cakeSize: "",
             orderQuantity: 1 || "",
             eventDate: "",
-            collectingDate: "",
+            collectionDate: "",
             deliveryType: "",
             city: "",
             state: "",
@@ -117,7 +127,7 @@ const FormikOrderPage = withFormik({
 
     validationSchema: MainOrderValidation,
 
-    handleSubmit(values) {
+    handleSubmit(values, { resetForm, setSubmitting, setStatus}) {
         if (values.cakeType !== "other") {
             values.otherCake = ""
         }
@@ -127,7 +137,7 @@ const FormikOrderPage = withFormik({
         const filteredObject = {};
         for(let e in values) {
             if (values.hasOwnProperty(e)) {
-              if (removedValues.indexOf(values[e]) == -1) {
+              if (removedValues.indexOf(values[e]) === -1) {
                   filteredObject[e] = values[e];
               }
             }
@@ -139,8 +149,16 @@ const FormikOrderPage = withFormik({
             method: "POST",
             body: encode({ "form-name": "cake-order", ...filteredObject })
         })
-            .then(() => alert("Success!"))
-            .catch(error => alert(error))
+            .then(() =>{
+                resetForm()
+                setSubmitting(false)
+                setStatus({ success : true})
+            })
+            .catch(error => {
+                console.log(error)
+                setSubmitting(false)
+                error && setStatus({failure : true})
+            })
 
 
     }

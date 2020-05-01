@@ -6,6 +6,8 @@ import './ReadyMade.css'
 import PopMessage from './popup/PopMessage'
 import { ReadyMadeValidation } from './ReadyMadeValidation'
 import BuyerInfo from '../cakeforms/BuyerInfo'
+import Successful from './submissionPopup/Successful'
+import FailurePop from '../submissionPopup/FailurePop'
 
 
 const encode = (data) => {
@@ -17,7 +19,7 @@ const encode = (data) => {
     return formData;
 }
 
-const ReadyMadeForm = ({ values,errors, location }) => {
+const ReadyMadeForm = ({ values, errors, resetForm, location, status, isSubmiting, setStatus }) => {
     const { image, name, price, size } = location.state
 
     const [popupMessage, setPopupMessage] = useState(false)
@@ -31,42 +33,55 @@ const ReadyMadeForm = ({ values,errors, location }) => {
         setPopupMessage(false)
     }
 
-    
+    const closeUp = () => {
+        setStatus({ success: false })
+        setStatus({ failure: false })
+        resetForm()
+    }
+
+
 
     return (
         <div className="form-container-wrapper">
-        <div className="form-container">
-         
-         <PopMessage closePopup={closePopup} popupMessage={popupMessage} />
-            <div className="cake-info">
-                <div className="cake-info-img">
-                    <img src={image} alt="cake" />
+            <div className="form-container">
+
+                <PopMessage closePopup={closePopup} popupMessage={popupMessage} />
+                <Successful closePopup={closeUp} success={status ? status.success : false}
+                    orderCode={values.orderCode} cakePrice={price} buyerName={values.buyerName}
+                    buyerNumber={values.buyerNumber}
+                />
+                <FailurePop closePopup={closeUp} failure={status ? status.failure : false} />
+
+                <div className="cake-info">
+                    <div className="cake-info-img">
+                        <img src={image} alt="cake" />
+                    </div>
+                    <h3>{name}</h3>
+                    <h3>{price}</h3>
                 </div>
-                <h3>{name}</h3>
-            </div>
-            <div className="order-code-con" style={{marginBottom:"10px"}}>
-                <p>Order Code : {values.orderCode}</p>
-            </div>
-            <Form className="form-field">
-                <AddedInfo size={size} />
-                <BuyerInfo />
-                <DeliveryType />
-                {
-                    Object.entries(errors).map(([key, value]) => {
-
-                        return (
-                            <div className="error-con" key={key}><p>{value}</p></div>
-                        )
-
-                    })
-
-                }
-                <div className="button-div">
-                    <button type="submit">Place Order</button>
+                <div className="order-code-con" style={{ marginBottom: "10px" }}>
+                    <p>Order Code : {values.orderCode}</p>
                 </div>
-            </Form>
+                <Form className="form-field">
+                    <AddedInfo size={size} />
+                    <BuyerInfo />
+                    <DeliveryType />
+                    {
+                        Object.entries(errors).map(([key, value]) => {
 
-        </div>
+                            return (
+                                <div className="error-con" key={key}><p>{value}</p></div>
+                            )
+
+                        })
+
+                    }
+                    <div className="button-div">
+                        <button type="submit" disabled={isSubmiting}>Place Order</button>
+                    </div>
+                </Form>
+
+            </div>
         </div>
     )
 
@@ -98,17 +113,18 @@ const FormikReadyMadeOrder = withFormik({
 
         }
     },
-    validationSchema : ReadyMadeValidation,
 
-    handleSubmit(values) {
+    validationSchema: ReadyMadeValidation,
+
+    handleSubmit(values, { resetForm, setSubmitting, setStatus }) {
         const removedValues = ""
         const filteredObject = {};
 
-        for(let e in values) {
+        for (let e in values) {
             if (values.hasOwnProperty(e)) {
-              if (removedValues.indexOf(values[e]) == -1) {
-                  filteredObject[e] = values[e];
-              }
+                if (removedValues.indexOf(values[e]) === -1) {
+                    filteredObject[e] = values[e];
+                }
             }
         }
         console.log(filteredObject)
@@ -117,8 +133,16 @@ const FormikReadyMadeOrder = withFormik({
             method: "POST",
             body: encode({ "ready-made-form": "cake-order", ...filteredObject })
         })
-            .then(() => alert("Success!"))
-            .catch(error => alert(error));
+            .then(() => {
+                alert("Success!")
+                setSubmitting(false)
+                setStatus({ success: true })
+            })
+            .catch(error => {
+                alert(error)
+                setSubmitting(false)
+                error && setStatus({ failure: true })
+            });
 
     }
 
