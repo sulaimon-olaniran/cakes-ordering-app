@@ -23,13 +23,14 @@
     border-radius: 25px;
     overflow: hidden;
 }
+
 .image-con {
     width: 100%;
     height: 10rem;
 }
 
 .image-con img {
-    height: 100%;
+    height: 80%;
     min-width: 100%;
 }
 
@@ -87,6 +88,10 @@
   }
   .each-cake-con{
       width: 40%;
+      height: 25rem;
+  }
+  .image-con{
+      height: 15rem;
   }
 }
 
@@ -101,12 +106,10 @@
     }
     .each-cake-con{
         width: 32%;
+        height: 30rem;
     }
     .cake-details-con {
         height: 13rem;
-    }
-    .each-cake-con{
-        min-height: 30rem;
     }
     .cake-details-con button {
         width: 8rem;
@@ -120,7 +123,7 @@
     }
     .each-cake-con{
         width: 22%;
-        min-height: 23rem;
+        height: 23rem;
     }
     .image-con{
         height: 13rem;

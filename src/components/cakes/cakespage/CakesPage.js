@@ -1,19 +1,18 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './CakesPage.css'
 import EachCake from "./EachCake"
 
 
-const CakesPage = () => {
-    const [cakes, setCakes] = useState(["one", "two", "three", "four", "five", "six", "seven", "eight"])
+const CakesPage = ({cakes}) => {
 
     return (
         <div className="cake-page-div">
         <section className="cake-page-con">
             {
-                cakes.map((cake, i) => {
+               cakes && cakes.map((cake, i) => {
                     return (
                    
-                        <EachCake  key={i} />
+                        <EachCake  key={i} cake={cake} />
                     
                     )
                 })

@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import CakesPage from './cakespage/CakesPage'
+import { AppContext } from '../contexts/AppContext'
 
 
 const Cakes = () => {
+     const { cakes } = useContext(AppContext)
+
     return (
-        <CakesPage />
+        <div>
+          <CakesPage cakes={cakes} />
+        </div>
     )
 }
 

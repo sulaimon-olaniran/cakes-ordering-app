@@ -19,10 +19,22 @@ const encode = (data) => {
     return formData;
 }
 
+
 const ReadyMadeForm = ({ values, errors, resetForm, location, status, isSubmiting, setStatus }) => {
     const { image, name, price, size } = location.state
 
     const [popupMessage, setPopupMessage] = useState(false)
+
+    const getCakePriceFromSize = cake => {
+
+        for (var i = 0; i < price.length; i++) {
+            if (cake === size[i]) {
+                return price[i]
+            }
+        }
+    }
+    console.log(getCakePriceFromSize(values.cakeSize && values.cakeSize))
+    const priceBySize = getCakePriceFromSize(values.cakeSize && values.cakeSize)
 
     useEffect(() => {
         setPopupMessage(true)
@@ -47,7 +59,7 @@ const ReadyMadeForm = ({ values, errors, resetForm, location, status, isSubmitin
 
                 <PopMessage closePopup={closePopup} popupMessage={popupMessage} />
                 <Successful closePopup={closeUp} success={status ? status.success : false}
-                    orderCode={values.orderCode} cakePrice={price} buyerName={values.buyerName}
+                    orderCode={values.orderCode} cakePrice={priceBySize} buyerName={values.buyerName}
                     buyerNumber={values.buyerNumber}
                 />
                 <FailurePop closePopup={closeUp} failure={status ? status.failure : false} />
@@ -57,13 +69,12 @@ const ReadyMadeForm = ({ values, errors, resetForm, location, status, isSubmitin
                         <img src={image} alt="cake" />
                     </div>
                     <h3>{name}</h3>
-                    <h3>{price}</h3>
                 </div>
                 <div className="order-code-con" style={{ marginBottom: "10px" }}>
                     <p>Order Code : {values.orderCode}</p>
                 </div>
                 <Form className="form-field">
-                    <AddedInfo size={size} />
+                    <AddedInfo size={size} amount={priceBySize} />
                     <BuyerInfo />
                     <DeliveryType />
                     {

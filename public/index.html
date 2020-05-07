@@ -60,9 +60,9 @@ powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener nofollow
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-56V948K"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
+  <!-- End Google Tag Manager (noscript) //netlify-honeypot="bot-field" -->
 
-    <form name="cake-order" netlify netlify-honeypot="bot-field"  hidden>
+    <form name="cake-order" netlify  data-netlify-recaptcha="true"  hidden>
         <input type="radio" name="cakeType" />
         <input type="text" name="otherCake" />
         <input type="radio" name="cakeFill" />
@@ -130,7 +130,7 @@ powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener nofollow
         <input type="tel" name="secondNumber"  />
         <input type="file" name="cakeSample" />
 
-
+      <div data-netlify-recaptcha="true" ></div>
       </form>
 
       <form name="ready-made-form" netlify netlify-honeypot="bot-field"  hidden>

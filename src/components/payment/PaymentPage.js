@@ -41,7 +41,6 @@ const PaymentPage = ({ values, errors, touched }) => {
                             <p>&#8358;<Field type="number" name="amount" placeholder="Amount to pay" /></p>
                             {touched.amount && errors.amount && <small>{errors.amount}</small>}
                         </div>
-                        <button type="submit" > click me click me </button>
                     </Form>
                 </div>
                 <Paystack buyer={buyerName} number={buyerNumber} email={buyerEmail} code={orderCode} amount={amount} />
@@ -53,10 +52,12 @@ const PaymentPage = ({ values, errors, touched }) => {
 
 const FormikPaymentPage = withFormik({
     mapPropsToValues({ location }) {
-        const { names, number, price, code } = location.state
+        console.log(location)
+  const { names, number, price, code } = location.state !== null && location.state
+
         return {
             buyerNumber: number || "",
-            buyerName: names || "",
+            buyerName:  names || "", 
             buyerEmail: "",
             amount: price || "",
             orderCode: code || ""

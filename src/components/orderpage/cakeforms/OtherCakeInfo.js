@@ -23,8 +23,8 @@ const OtherCakeInfo = ({ setFieldValue }) => {
                     <option value="14' inches" >14' inches</option>
                     <option value="18' inches" >18' inches</option>
                     <option value="20' inches" >20' inches</option>
-
                 </Field>
+               
                 <Field component="textarea" name="specialRequest" placeholder="Special Requests" className="text-area" rows="3" />
 
 
