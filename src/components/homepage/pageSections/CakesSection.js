@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './PageSections.css'
 import { NavLink } from 'react-router-dom'
 import ImgSlider from './slider/ImgSlider'
-import cake_image from './cake_image.jpg'
+import { AppContext } from '../../contexts/AppContext'
 
 const CakesSection = () => {
+   const { cakes } =  useContext(AppContext)
+   console.log(cakes )
     return (
 
         <section className="cakes-section">
@@ -12,7 +14,7 @@ const CakesSection = () => {
                 <h2>Some of the best Cakes</h2>
                 <p>Click view more to see more cakes and Order</p>
             </div>
-            <ImgSlider cakeImage={cake_image} />
+            <ImgSlider cakes={cakes} />
             <NavLink to='/cakes' className="button-link-con">
 
                 <button>view more</button>

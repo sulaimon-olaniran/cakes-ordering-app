@@ -12,6 +12,7 @@ const PaymentPage = ({ values, errors, touched }) => {
             <div className="payment-con">
                 <div className="bank-account">
                     <h3>Pay to bank account</h3>
+                    <p>Amount to pay is &#8358; {amount}</p>
                     <p>Bank <b>:</b> Guarantee Trust Bank</p>
                     <p>Account Num <b>:</b> 0543453234</p>
                     <p>Account Name <b>:</b> Leemahs Treats</p>

@@ -1,18 +1,21 @@
 import React, { createContext, useState, useEffect } from 'react'
+import { trackPromise, usePromiseTracker } from 'react-promise-tracker'
 import { db } from '../../services/Firebase'
 
 export const AppContext = createContext()
 
 
 const AppContextProvider = (props) => {
+    const { promiseInProgress } = usePromiseTracker()
+
     const [burgerLink, setBurgerLink] = useState(false)
     const [cakesLink, setCakesLink] = useState(false)
-    const [cakeName, setCakeName] = useState([])
-    const [cakeImage, setCakeImage] = useState([])
-    const [cakePrice, setCakePrice] = useState([])
     const [cakes, setCakes] = useState(null)
+    const [cupCakes, setCupCakes] = useState(null)
+    const [cakeErrors, setCakeErrors] = useState(null)
     
     const getCakes = () => {
+        trackPromise(
         db.collection('cakes')
             .get()
             .then(snapshot => {
@@ -21,17 +24,30 @@ const AppContextProvider = (props) => {
                     const data = doc.data()
                     cakes.push(data)
                 })
-                console.log(cakes)
+                //console.log(cakes)
                 setCakes(cakes)
-                setCakeName(cakes.name)
-                setCakeImage(cakes.imageUrl)
-                setCakePrice(cakes.priceList)
             })
-            .catch(error => console.log(error))
+            .catch(error => setCakeErrors(error)))
+    }
+    const getCupCakes = () => {
+        trackPromise(
+        db.collection('cupcakes')
+            .get()
+            .then(snapshot => {
+                const cupCakes = []
+                snapshot.forEach(doc => {
+                    const data = doc.data()
+                    cupCakes.push(data)
+                })
+                console.log(cupCakes)
+                setCupCakes(cupCakes)
+            })
+            .catch(error => console.log(error)))
     }
 
     useEffect(() => {
         getCakes()
+        getCupCakes()
     }, [])
 
     const handleCakeLink = () => {
@@ -51,8 +67,8 @@ const AppContextProvider = (props) => {
 
     return (
         <AppContext.Provider value={{
-            handleBurger: handleBurger, closeBurger: closeBurger, burgerLink, cakeImage, cakePrice,
-            handleCakeLink: handleCakeLink, cakesLink, cakeName, getCakes: getCakes, cakes
+            handleBurger: handleBurger, closeBurger: closeBurger, burgerLink, cupCakes, cakeErrors,
+            handleCakeLink: handleCakeLink, cakesLink, getCakes: getCakes, cakes, promiseInProgress
         }}>
             {props.children}
         </AppContext.Provider>

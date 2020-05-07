@@ -14,6 +14,16 @@
     flex-wrap: wrap;
     justify-content: space-around;
 }
+.spinner-con {
+    min-height: 90vh;
+    width: 100%;
+    background-color: rgb(234, 236, 123);
+    display: flex;
+    overflow-x: hidden;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
 
 .each-cake-con {
     width: 45%;

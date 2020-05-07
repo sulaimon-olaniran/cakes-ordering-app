@@ -50,7 +50,7 @@ const EachCake = ({ cake }) => {
                     }
                     }
                 >
-                    <button>Buy Cake</button>
+                    <button>Purchase</button>
                 </NavLink>
 
             </div>
