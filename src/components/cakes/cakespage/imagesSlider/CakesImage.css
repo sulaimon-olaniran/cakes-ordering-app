@@ -6,6 +6,9 @@
     overflow: hidden;
     
 }
+.hide-button-con{
+    display: none;
+}
 .cakeslide-button-con{
     width: 100%;
     display: flex;

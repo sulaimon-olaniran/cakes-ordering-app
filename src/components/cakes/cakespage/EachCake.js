@@ -36,7 +36,7 @@ const EachCake = ({ cake }) => {
 
             <div className="cake-details-con">
                 <h4>{cake.name}</h4>
-                <p>{sortedPrices[0]} - {sortedPrices[len - 1]}</p>
+                <p>&#8358;{sortedPrices[0]} - &#8358;{sortedPrices[len - 1]}</p>
 
                 <NavLink
                     to={{

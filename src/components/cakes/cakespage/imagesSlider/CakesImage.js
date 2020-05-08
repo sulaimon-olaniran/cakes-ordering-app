@@ -10,8 +10,10 @@ function CakesImage({cakeImage}) {
         x === -100 * (cakeImage.length - 1) ? setX(0) : setX(x - 100);
     }
 
-    const handlePrevious = () => {
+    const buttonClass = cakeImage.length > 1 ? "cakeslide-button-con" : "hide-button-con"
 
+    const handlePrevious = () => {
+        x === 0 ?  setX(-100 * (cakeImage.length - 1)) : setX(x + 100);
     }
 
     return (
@@ -33,7 +35,7 @@ function CakesImage({cakeImage}) {
 
 
             </div>
-            <div className="cakeslide-button-con"><button>«</button> <button onClick={handleNext}>»</button></div>
+            <div className={buttonClass}><button onClick={handlePrevious}>«</button> <button onClick={handleNext}>»</button></div>
         </React.Fragment>
     )
 

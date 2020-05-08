@@ -12,22 +12,22 @@ const Footer = () => {
                 <h3>About Us</h3>
                 <div className="about-message">
                     <p>We Make some of the best cakes and cup cakes,
-                        we're currently only available in Lagos as we
-                        are just starting up as a cake shop, with
-                        your support and patronizing, we hope to grow into
-                        a larger business in due .
+                    we're currently only available in Lagos as we
+                    are just starting up as a cake shop, with
+                    your support and patronizing, we hope to grow into
+                    a larger business in due .
                     </p>
-                    <hr/>
-                    <p>We dont have ready made cakes, cakes are made 
-                        based on orders placed
+                    <hr />
+                    <p>We dont have ready made cakes, cakes are made
+                    based on orders placed
                     </p>
-                  <hr/>
-                    <p>Below you can find ways to contact us, either by 
-                        our address, email address or social medias.
-                        Also follow us on our social medias for latest news
-                        and updates.
+                    <hr />
+                    <p>Below you can find ways to contact us, either by
+                    our address, email address or social medias.
+                    Also follow us on our social medias for latest news
+                    and updates.
                     </p>
-                    <hr/>
+                    <hr />
 
                     <p>Thank You</p>
                 </div>
@@ -43,8 +43,8 @@ const Footer = () => {
             <div className="chat-con">
                 <h3>Chat with us</h3>
                 <div className="chat-icons">
-                    <i className="fa fa-facebook-f" style={{ fontSize: "48px", color: "lightblue" }}></i>
-                    <i className="fa fa-whatsapp" style={{ fontSize: "48px", color: "green" }}></i>
+                    <a href="http://m.me/oladipupo.niran" > <i className="fa fa-facebook-f" style={{ fontSize: "48px", color: "lightblue" }}></i></a>
+                    <a href="https://wa.me/09035793269"> <i className="fa fa-whatsapp" style={{ fontSize: "48px", color: "green" }}></i></a>
                 </div>
             </div>
 
@@ -57,7 +57,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            
+
 
         </footer>
     )
