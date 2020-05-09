@@ -39,7 +39,7 @@ const AppContextProvider = (props) => {
                     const data = doc.data()
                     cupCakes.push(data)
                 })
-                console.log(cupCakes)
+               // console.log(cupCakes)
                 setCupCakes(cupCakes)
             })
             .catch(error => console.log(error)))

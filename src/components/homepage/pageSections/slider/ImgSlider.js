@@ -11,7 +11,7 @@ function ImgSlider({ cakes }){
     }, 2000);
 
     return () => clearInterval(interval);
-  }, [x, cakes && cakes.length]);
+  }, [x, cakes ]);
 
   return(
       <div className="slider-container">

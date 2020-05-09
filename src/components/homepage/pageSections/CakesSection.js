@@ -6,7 +6,6 @@ import { AppContext } from '../../contexts/AppContext'
 
 const CakesSection = () => {
    const { cakes } =  useContext(AppContext)
-   console.log(cakes )
     return (
 
         <section className="cakes-section">
