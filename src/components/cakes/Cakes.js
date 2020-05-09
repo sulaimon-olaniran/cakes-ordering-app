@@ -1,10 +1,13 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import CakesPage from './cakespage/CakesPage'
 import { AppContext } from '../contexts/AppContext'
 import { RingLoader } from "react-spinners"
 
 
 const Cakes = () => {
+  useEffect(()=>{
+    window.scrollTo(0, 0)
+  }, [])
   const { promiseInProgress, cakes, cakeErrors } = useContext(AppContext)
 
   return (

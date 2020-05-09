@@ -38,7 +38,7 @@ const ReadyMadeForm = ({ values, errors, resetForm, location, status, isSubmitin
 
     useEffect(() => {
         setPopupMessage(true)
-
+        window.scrollTo(0, 0)
     }, [])
 
     const closePopup = () => {

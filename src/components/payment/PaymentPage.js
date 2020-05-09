@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Paystack from './Paystack'
 import './Payment.css'
 import { withFormik, Form, Field } from 'formik'
@@ -6,6 +6,9 @@ import * as yup from 'yup'
 
 
 const PaymentPage = ({ values, errors, touched }) => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     const { buyerName, buyerEmail, buyerNumber, orderCode, amount } = values
     return (
         <div className="payment-con-wrapper">
@@ -54,11 +57,11 @@ const PaymentPage = ({ values, errors, touched }) => {
 const FormikPaymentPage = withFormik({
     mapPropsToValues({ location }) {
         console.log(location)
-  const { names, number, price, code } = location.state !== null && location.state
+        const { names, number, price, code } = location.state !== null && location.state
 
         return {
             buyerNumber: number || "",
-            buyerName:  names || "", 
+            buyerName: names || "",
             buyerEmail: "",
             amount: price || "",
             orderCode: code || ""

@@ -29,7 +29,7 @@ const OrderPage = ({ values, errors, touched, setFieldValue, isSubmitting, statu
  
     useEffect(() => {
         setPopupMessage(true)
-
+        window.scrollTo(0, 0)
     }, [])
 
     const closePopup = () => {
