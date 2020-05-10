@@ -103,7 +103,7 @@ const FormikOrderPage = withFormik({
             otherFlavor: "",
             cakeIcing: "",
             otherIcing: "",
-            fullName: "",
+            buyerName: "",
             celebrantSex: "",
             ocassion: "",
             celebrantAge: "",

@@ -37,7 +37,7 @@ const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2
         then: yup.string().required("What Icing do you want for the cake ?")
     }),
 
-    fullName: yup.string().required("Please Name of buyer is required"),
+    buyerName: yup.string().required("Please Name of buyer is required"),
     buyerNumber:  yup.string().matches(phoneRegExp, "enter a valid buyer's number").min(11).max(11).required("Buyer's phone number is required"),
     celebrantSex: yup.string().required("Sex of celebrant is required"),
     celebrantAge: yup.string().required("Choose an age group for the celebrant"),
