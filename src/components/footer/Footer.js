@@ -15,12 +15,14 @@ const Footer = () => {
                     we're currently only available in Lagos as we
                     are just starting up as a cake shop, with
                     your support and patronizing, we hope to grow into
-                    a larger business in due .
+                    a larger business in due time.
                     </p>
                     <hr />
                     <p>We dont have ready made cakes, cakes are made
                     based on orders placed
                     </p>
+                    <hr />
+                    <p>Please place order 24-48 hours before delivery</p>
                     <hr />
                     <p>Below you can find ways to contact us, either by
                     our address, email address or social medias.
@@ -35,16 +37,16 @@ const Footer = () => {
 
             <div className="contact-con">
                 <h3>Contact Us</h3>
-                <span className="span"><img src={addressicon} className="address-icon" alt="address" /> <p>7, Adigun Street, badagry town, Badagry, Lagos State</p></span>
-                <p> <img src={phoneicon} alt="icon" /> 09035793269, 08032345789</p>
-                <p><img src={mailicon} alt="mail" /> Leemahstreats@gmail.com </p>
+                <span className="span"><img src={addressicon} className="address-icon" alt="address" /> <p>17, Caroline Street, Aradagun, Badagry, Lagos State</p></span>
+                <p> <img src={phoneicon} alt="icon" /> 08088614722, 08112231401</p>
+                <p><img src={mailicon} alt="mail" /> sadeeyahalimah@gmail.com </p>
             </div>
 
             <div className="chat-con">
                 <h3>Chat with us</h3>
                 <div className="chat-icons">
                     <a href="http://m.me/oladipupo.niran" > <i className="fa fa-facebook-f" style={{ fontSize: "48px", color: "lightblue" }}></i></a>
-                    <a href="https://wa.me/09035793269"> <i className="fa fa-whatsapp" style={{ fontSize: "48px", color: "green" }}></i></a>
+                    <a href="https://wa.me/08088614722"> <i className="fa fa-whatsapp" style={{ fontSize: "48px", color: "green" }}></i></a>
                 </div>
             </div>
 
@@ -53,7 +55,7 @@ const Footer = () => {
                 <div className="social-media">
                     <a href="https://web.facebook.com" className="fa fa-facebook"><span className="foot-span">Link To Facebook</span></a>
                     <a href="https://twitter.com/Olami_dipupo" className="fa fa-twitter"><span className="foot-span">Link To Twitter</span></a>
-                    <a href="instagram.com" className="fa fa-instagram"><span className="foot-span">Link To Instagram</span></a>
+                    <a href="http://instagram.com/leemahstreats" className="fa fa-instagram"><span className="foot-span">Link To Instagram</span></a>
                 </div>
             </div>
 

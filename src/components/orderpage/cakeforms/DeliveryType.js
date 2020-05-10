@@ -32,7 +32,7 @@ const DeliveryType = () => {
                     <div className="pick-address">
                         <h3>Pick up address</h3>
                         <h4>Leemah's Treats Cakes</h4>
-                        <p>5, blah blah Street, Badagry town</p>
+                        <p>17, Caroline Street, Aradagun</p>
                         <p>Badagry, Lagos State</p>
                         <p>Phone : 0903333333, 0904444444</p>
                         <p>Email : leemasstreats@gmail.com</p>

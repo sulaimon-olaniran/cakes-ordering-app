@@ -2,7 +2,7 @@ import React from 'react'
 import './Payment.css'
 import PaystackButton from 'react-paystack'
 
-const key = "pk_test_41ee8583da081526072608e37e6daff1dd0b9cec"
+const key = "pk_live_ec71620cc229ea274e58e41f57fca3719a09afda"
 const Paystack = ({buyer, number, email, code, amount}) => {
     const disabled = buyer === "" || code === "" ||amount === "" ? true : false
     const callback = (response) => {
