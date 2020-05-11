@@ -34,8 +34,8 @@ const DeliveryType = () => {
                         <h4>Leemah's Treats Cakes</h4>
                         <p>17, Caroline Street, Aradagun</p>
                         <p>Badagry, Lagos State</p>
-                        <p>Phone : 0903333333, 0904444444</p>
-                        <p>Email : leemasstreats@gmail.com</p>
+                        <p>Phone : 08088614722, 08112231401</p>
+                        <p>Email : sadeeyahalimah@gmail.com</p>
                     </div>
                 </span>
 

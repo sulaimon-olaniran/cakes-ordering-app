@@ -32,6 +32,7 @@ const BuyerInfo = ({ error, touch }) => {
                 </div>
                 <Field type="text" placeholder="Buyer's Fullname" name="buyerName" className="full-name" style={{fontSize:"0.8rem"}} />
                 <Field type="tel" name="buyerNumber" placeholder="Buyer's Number" />
+                <Field type="tel" name="buyerEmail" placeholder="Buyer's Email" />
 
             </div>
           

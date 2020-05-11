@@ -46,7 +46,7 @@ const Footer = () => {
                 <h3>Chat with us</h3>
                 <div className="chat-icons">
                     <a href="http://m.me/oladipupo.niran" > <i className="fa fa-facebook-f" style={{ fontSize: "48px", color: "lightblue" }}></i></a>
-                    <a href="https://wa.me/08088614722"> <i className="fa fa-whatsapp" style={{ fontSize: "48px", color: "green" }}></i></a>
+                    <a href="https://wa.me/2348088614722"> <i className="fa fa-whatsapp" style={{ fontSize: "48px", color: "green" }}></i></a>
                 </div>
             </div>
 

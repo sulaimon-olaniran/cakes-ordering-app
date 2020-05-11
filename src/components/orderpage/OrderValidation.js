@@ -9,6 +9,10 @@ const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2
         then: yup.string().required("What type of cake do you want?")
     }),
 
+    buyerEmail : yup.string()
+    .email('Invalid email')
+    .required('Required') ,
+
     cakeFill: yup.string().required("Please Select the cake filling"),
 
     otherFill: yup.string().when('cakeFill', {

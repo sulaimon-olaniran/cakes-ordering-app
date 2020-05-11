@@ -3,6 +3,9 @@ import * as yup from 'yup'
 const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
  export const ReadyMadeValidation = yup.object().shape({
     buyerName: yup.string().required("Please Name of buyer is required"),
+    buyerEmail : yup.string()
+    .email('Invalid email')
+    .required('Required') ,
     buyerNumber:  yup.string().matches(phoneRegExp, "enter a valid buyer's number").min(11).max(11).required("Buyer's phone number is required"),
     celebrantSex: yup.string().required("Sex of celebrant is required"),
     celebrantAge: yup.string().required("Choose an age group for the celebrant"),

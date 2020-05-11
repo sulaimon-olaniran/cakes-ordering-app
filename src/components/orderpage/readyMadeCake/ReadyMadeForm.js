@@ -120,7 +120,8 @@ const FormikReadyMadeOrder = withFormik({
             state: "",
             postalCode: "",
             phoneNumber: "",
-            secondNumber: ""
+            secondNumber: "",
+            buyerEmail : ""
 
         }
     },

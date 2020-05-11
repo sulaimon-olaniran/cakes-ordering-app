@@ -120,7 +120,8 @@ const FormikOrderPage = withFormik({
             postalCode: "",
             phoneNumber: "",
             secondNumber: "",
-            buyerNumber: ""
+            buyerNumber: "",
+            buyerEmail : ""
 
         }
     },
