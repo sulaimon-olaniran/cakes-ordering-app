@@ -12,6 +12,7 @@ const PopupMessage = ({closePopup}) =>{
                  <li>Your order is not binding until you pay 75% price for the cake</li>
                  <li>Take note of your order code, it is used to track orders</li>
                  <li>Add the code as a transfer information during payment</li>
+                 <li>Delivery cost &#8358;2000 - &#8358;2500 depending on location</li>
                  <li>Make sure the buyer's name rhymes with the account name used for payment</li>
                  
              </ul>

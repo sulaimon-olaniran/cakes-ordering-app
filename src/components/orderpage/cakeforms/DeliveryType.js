@@ -22,7 +22,12 @@ const DeliveryType = () => {
                         <div className="address">
                             <Field component="textarea" name="houseAddress" placeholder="House Address" className="text-area" rows="3" />
                             <Field type="text" name="city" placeholder="City" />
-                            <Field type="text" name="state" placeholder="State/Province" />
+                            
+                            <Field component="select" name="state" className="select-box" >
+                                <option value="" >State</option>
+                                <option value="6' inches" >Lagos State</option>
+
+                            </Field>
                             <Field type="text" name="postalCode" placeholder="Postal Code" />
                             <Field type="tel" name="phoneNumber" placeholder="Phone Number" />
                             <Field type="tel" name="secondNumber" placeholder="Second Number" />

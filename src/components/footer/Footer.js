@@ -19,10 +19,10 @@ const Footer = () => {
                     </p>
                     <hr />
                     <p>We dont have ready made cakes, cakes are made
-                    based on orders placed
+                    based on orders placed.
                     </p>
                     <hr />
-                    <p>Please place order 24-48 hours before delivery</p>
+                    <p>Please place order 24-48 hours before delivery.</p>
                     <hr />
                     <p>Below you can find ways to contact us, either by
                     our address, email address or social medias.
@@ -31,7 +31,7 @@ const Footer = () => {
                     </p>
                     <hr />
 
-                    <p>Thank You</p>
+                    <p>Thank You.</p>
                 </div>
             </div>
 
