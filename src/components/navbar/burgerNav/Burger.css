@@ -1,18 +1,28 @@
 .link-drawer {
-    display: flex;
-    flex-direction: column ;
-    justify-content: flex-start;
-    align-items: center;
-    height: 100%;
-    background-color: whitesmoke;
-    width: 70%;
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 99999;
-    transform: translateX(100%);
-    transition: transform 0.35s ease-out;
+  display: flex;
+  flex-direction: column ;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  background-color: whitesmoke;
+  width: 70%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99999;
+  transform: translateX(100%);
+  transition: transform 0.35s ease-out;
 
+}
+
+ul li {
+  color: rgb(78, 76, 76);
+}
+
+.is-active {
+  background: none;
+  border: none;
+  border-bottom: 2px solid salmon;
 }
 .cakes-link-con {
   display: flex;

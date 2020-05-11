@@ -27,6 +27,17 @@ nav {
     list-style: none;
     display: flex;
     justify-content: space-between;
+   
+}
+ul li {
+    color: rgb(78, 76, 76);
+}
+
+.active-link{
+    border-right: 2px solid salmon;
+    border-left: 2px solid salmon;
+    padding: 0px 5px;
+    border-radius: 10px;
 }
 
 .burger-container  img{

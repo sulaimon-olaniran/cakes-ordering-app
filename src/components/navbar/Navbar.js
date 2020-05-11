@@ -1,7 +1,7 @@
 import React from 'react'
 import BurgerButton from './burgerNav/BurgerButton'
 import './Navbar.css'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 import pagelogo from './pagelogo.png'
 
 
@@ -10,24 +10,27 @@ const Navbar = () => {
     return (
         <nav>
             <div className="logo-container">
-                <img src={pagelogo} alt="Logo" />
+              <Link to="/"> <img src={pagelogo} alt="Logo" /></Link> 
             </div>
             <div className="links-container">
                 <ul>
-                    <NavLink to='/'>
+                    <NavLink exact to='/' activeClassName="active-link">
                         <li>Home</li>
                     </NavLink>
-                    <NavLink to='/payment' >
+
+                    <NavLink to='/payment'activeClassName="active-link" >
                         <li>Payment</li>
                     </NavLink>
-                    <NavLink to='/cakes'>
+
+                    <NavLink to='/cakes' activeClassName="active-link">
                         <li>Cakes</li>
                     </NavLink>
-                    <NavLink to='/cupcakes' >
+
+                    <NavLink to='/cupcakes' activeClassName="active-link">
                         <li>Cupcakes</li>
                     </NavLink>
 
-                    <NavLink to='/order'>
+                    <NavLink to='/order' activeClassName="active-link">
                         <li>Order</li>
                     </NavLink>
                 </ul>

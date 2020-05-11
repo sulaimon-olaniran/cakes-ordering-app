@@ -19,26 +19,26 @@ const BurgerLinks = () => {
             </div>
 
             <ul className="burger-link-con">
-                <NavLink to='/' onClick={closeBurger}>
+                <NavLink exact to='/' onClick={closeBurger} activeClassName='is-active'>
                     <li>Home</li>
                 </NavLink>
 
-                <NavLink to='/payment' onClick={closeBurger}>
+                <NavLink to='/payment' onClick={closeBurger} activeClassName='is-active'>
                     <li>Payment</li>
                 </NavLink> 
 
                 <li onClick={handleCakeLink}>Products </li>
                     <ul className={cakeClass} >
-                        <NavLink to='/cakes' onClick={closeBurger}>
+                        <NavLink to='/cakes' onClick={closeBurger} activeClassName='is-active'>
                             <li>View Cakes</li>
                         </NavLink>
-                        <NavLink to='/cupcakes' onClick={closeBurger}>
+                        <NavLink to='/cupcakes' onClick={closeBurger} activeClassName='is-active'>
                             <li>View Cupcakes</li>
                         </NavLink>
 
                     </ul>
                
-                <NavLink to='/order' onClick={closeBurger}>
+                <NavLink to='/order' onClick={closeBurger} activeClassName='is-active'>
                     <li>Create Order</li>
                 </NavLink>
             </ul>

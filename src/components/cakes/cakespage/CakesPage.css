@@ -40,7 +40,7 @@
 }
 
 .image-con img {
-    height: 80%;
+    height: 100%;
     min-width: 100%;
 }
 
@@ -112,18 +112,21 @@
         width: 90%;
     }
     .image-con{
-        height: 17rem;
+        height: 15rem;
     }
     .each-cake-con{
         width: 32%;
-        height: 30rem;
+        height: 25rem;
     }
     .cake-details-con {
-        height: 13rem;
+        height: 10rem;
     }
     .cake-details-con button {
         width: 8rem;
         height: 2rem;
+    }
+    .image-con img {
+        height: 100%;
     }
 }
 
@@ -133,17 +136,6 @@
     }
     .each-cake-con{
         width: 22%;
-        height: 23rem;
-    }
-    .image-con{
-        height: 13rem;
-    }
-    .cake-details-con{
-        height: 10rem;
-    }
-    .cake-details-con button {
-        width: 8rem;
-        height: 2rem;
-        cursor: pointer;
+       
     }
 }
